@@ -1,0 +1,69 @@
+<div class="post recognition">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+		    <img class="img-rounded" src="/images/sample-thumbs/3.jpg" width="50" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href=""><%= lorem.first_name %> <%= lorem.last_name %></a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p><%= lorem.paragraph %></p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img src="/images/demo/withhearts1-500px.jpg" data-highres="/images/demo/withhearts1-highres.jpg">
+			  <img src="/images/demo/withhearts2-500px.jpg" data-highres="/images/demo/withhearts2-highres.jpg">
+			  <img src="/images/demo/withhearts3-500px.jpg" data-highres="/images/demo/withhearts3-highres.jpg">
+			  <img src="/images/demo/withhearts4-500px.jpg" data-highres="/images/demo/withhearts4-highres.jpg">
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a href="">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a href=""><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a href=""><i class="fa fa-comment"></i> 8</a></li>
+					<li><a href=""><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<% for i in 1..2 %>
+			<div class="media">
+			  <a class="media-left" href="#">
+			    <img class="img-circle" src="/images/sample-thumbs/4.jpg" width="30">
+			  </a>
+			  <div class="media-body">
+				<h5><a href=""><%= lorem.first_name %> <%= lorem.last_name %></a> <small>3 minutes ago</small></h5>
+			    <p><%= lorem.sentence %></p>
+			  </div>
+			</div>
+			<% end %>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+		  			  <img class="img-circle" src="/images/sample-thumbs/4.jpg" width="30">
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

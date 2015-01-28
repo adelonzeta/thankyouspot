@@ -1,0 +1,105 @@
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button data-target="#navigation-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/newsfeed.html" class="navbar-brand"><img src="/images/logo-user.png" /></a>
+    </div>
+    <div id="navigation-collapse" class="collapse navbar-collapse">
+		<form class="navbar-form navbar-left" role="search">
+			<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+		  <div class="form-group">
+		    <input type="text" class="form-control" placeholder="Search">
+		  </div>
+		</form>
+	  <ul class="nav navbar-nav navbar-right">
+		  <li><a href="/newsfeed.html">News Feed</a></li>
+          <li><a href="/discover.html">Discover</a></li>
+		  <li class="dropdown dropdown-notification">
+		    <a aria-expanded="false" role="button" aria-haspopup="true" data-toggle="dropdown" class="dropdown-toggle" href="#" id="nav-notifications">
+		      <i class="fa fa-bell"></i>
+		    </a>
+		    <ul aria-labelledby="nav-notifications" role="menu" class="dropdown-menu">
+			  <li class="dropdown-header">Notifications</li>
+		      <li class="unread">
+				  <a href="">
+					<div class="media">
+						<span class="media-left">
+							<img width="50px" height="50px" src="https://pacdn.500px.org/2867803/5ab80846b53a3391c51a9e14716c6a70036e10fc/1.jpg?4">
+						</span>
+						<div class="media-body">
+						  <p><strong>Ian Delgado</strong> started following you.</p>
+							<small>3 days ago</small>
+						</div>
+					</div>
+				  </a>
+		      </li>
+			  <% for i in 1..4 %>
+		      <li class="read">
+				  <a href="">
+					<div class="media">
+						<span class="media-left">
+							<img width="50px" height="50px" src="https://pacdn.500px.org/2867803/5ab80846b53a3391c51a9e14716c6a70036e10fc/1.jpg?4">
+						</span>
+						<div class="media-body">
+						  <p><strong>Ian Delgado</strong> started following you.</p>
+							<small>3 days ago</small>
+						</div>
+					</div>
+				  </a>
+		      </li>
+			  <% end %>
+		    </ul>
+		  </li>
+		  <li class="dropdown">
+		    <a aria-expanded="false" role="button" aria-haspopup="true" data-toggle="dropdown" class="dropdown-toggle" href="#" id="nav-user" >
+		      <img src="/images/profile-thumb.jpg" />
+		    </a>
+			<ul class="dropdown-menu">
+  		      <li role="presentation"><a href="/profile.html" tabindex="-1" role="menuitem"><h5>Oprah Winfrey</h5><small>View Profile</small></a></li>
+  		      <li class="divider" role="presentation"></li>
+  			  <li role="presentation"><a href="/settings.html" tabindex="-1" role="menuitem">Account Settings</a></li>
+  		      <li role="presentation"><a href="" tabindex="-1" role="menuitem">Sign Out</a></li>
+			</ul>	    
+		  </li>
+		  <li class="dropdown">
+			  <a href="#" data-toggle="dropdown" class="dropdown-toggle" href="#" id="post-btn"><i class="fa fa-quote-left"></i> Share</a>
+			  <form class="dropdown-menu compose-form">
+				  <div class="text form-group">
+				      <label><i class="fa fa-quote-left"></i></label>
+				      <textarea class="form-control" rows="3" placeholder="Share what's new..."></textarea>
+					  <div class="attached-photos" style="display:none;">
+						  <% for i in 1..4 %>
+						  <div class="photo">
+						  	<img src="/images/demo/nyc1-500px.jpg" />
+							<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+						  </div>
+						  <% end %>
+					  </div>
+					  <div class="attached-video" style="display:none;">
+						  <div class="input-group">
+						    <span class="input-group-addon"><i class="fa fa-youtube"></i></span>
+						    <input type="text" class="form-control" placeholder="Enter Youtube Video Link">
+						  </div>
+						  <a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+					  </div>
+				  </div>
+				  <div class="actions form-group clearfix">
+					  <ul class="nav nav-pills pull-left">
+					    <li><a href=""><i class="fa fa-camera"></i></a></li>
+					    <li><a href=""><i class="fa fa-video-camera"></i></a></li>
+					  </ul>
+					  <div class="pull-right">
+  					  	<button type="submit" class="btn btn-primary">Share</button>
+					  </div>
+				  </div>
+			  </form>
+		  </li>
+	  </ul>
+    </div>
+  </div>
+</nav>

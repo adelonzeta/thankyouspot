@@ -1,0 +1,21 @@
+{
+  "name": "thankyouspot-static",
+  "version": "0.0.0",
+  "authors": [
+    "adelonzeta@gmail.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/Resources/public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1",
+    "font-awesome": "~4.2.0",
+    "photoset-grid": "~1.0.1"
+  }
+}

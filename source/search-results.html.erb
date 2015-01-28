@@ -1,0 +1,29 @@
+---
+title: Search - john
+layout: user
+---
+
+<section class="results">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<h1><i class="fa fa-search"></i> Showing results for <span class="highlight">john</span></h1>
+				<% for i in 1..10 %>
+				<div class="media">
+				  <a class="media-left" href="#">
+					<span class="thumbnail">
+				    	<img class="img-rounded" width="130px" src="/images/sample-thumbs/2.jpg" />
+					</span>
+				  </a>
+				  <div class="media-body">					
+				    <h4 class="media-heading"><a href=""><span class="highlight">John</span> <%= lorem.last_name %></a> - <small><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</small></h4>
+				    <p><%= truncate(lorem.paragraph, :length => 120) %></p>  
+					<a href="" class="btn btn-success"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+				  </div>
+				</div>
+				<% end %>
+				<a href="" class="show-more btn btn-default btn-block">Show more</a>
+			</div>
+		</div>
+	</div>
+</section>
