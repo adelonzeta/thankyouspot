@@ -1,5 +1,4 @@
-#Thankyouspot Static Site -
-*adelonzeta@gmail.com*
+#Thankyouspot Static Site
 
 1. Install Dependencies
 	* gem install middleman
