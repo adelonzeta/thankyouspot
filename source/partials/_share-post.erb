@@ -13,28 +13,7 @@
 	</div>
 	<div class="body">
 		<p><%= lorem.paragraph %></p>
-		<div class="shared-post">
-			<div class="post">
-				<div class="head">
-					<div class="media">
-					  <div class="media-body">
-					    <h4 class="media-heading"><a href=""><%= lorem.first_name %> <%= lorem.last_name %></a> <span>originally shared:</p></h4>
-					  </div>
-					</div>
-				</div>
-				<div class="body">
-					<p><%= lorem.paragraph %></p>
-					<div class="attachments">
-						<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
-						  <img src="/images/demo/withhearts1-500px.jpg" data-highres="/images/demo/withhearts1-highres.jpg">
-						  <img src="/images/demo/withhearts2-500px.jpg" data-highres="/images/demo/withhearts2-highres.jpg">
-						  <img src="/images/demo/withhearts3-500px.jpg" data-highres="/images/demo/withhearts3-highres.jpg">
-						  <img src="/images/demo/withhearts4-500px.jpg" data-highres="/images/demo/withhearts4-highres.jpg">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<%= partial "partials/shared-post" %>
 	</div>
 	<div class="foot">
 		<div class="actions clearfix">
@@ -42,14 +21,14 @@
 				<ul class="nav nav-pills">
 					<li><a href="">Applaud</a></li>
 					<li><a href="">Comment</a></li>
-					<li><a data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
 				</ul>
 			</div>
 			<div class="pull-right">
 				<ul class="nav nav-pills">
-					<li><a href=""><i class="fa fa-thumbs-up"></i> 24</a></li>
-					<li><a href=""><i class="fa fa-comment"></i> 8</a></li>
-					<li><a href=""><i class="fa fa-share"></i> 0</a></li>
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
 				</ul>
 			</div>
 		</div>

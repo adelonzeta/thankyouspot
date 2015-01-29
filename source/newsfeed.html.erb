@@ -43,42 +43,4 @@ layout: user
 	</div>
 </section>
 
-<!-- Modal -->
-<div class="modal fade sharePostForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">Skip - View Ian's Profile</button>
-        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-pencil"></i> Say thanks to Ian!</h4>
-      </div>
-      <div class="modal-body">
-		  <form>
-		  	  <div class="form-group">
-		  	      <textarea class="form-control" rows="3" placeholder="What are you thankful for?"></textarea>
-				  <div class="attached-photos" style="display:none;">
-					  <% for i in 1..4 %>
-					  <div class="photo">
-					  	<img src="/images/demo/nyc1-500px.jpg" />
-						<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
-					  </div>
-					  <% end %>
-				  </div>
-				  <div class="attached-video" style="display:none;">
-					  <div class="input-group">
-					    <span class="input-group-addon"><i class="fa fa-youtube"></i></span>
-					    <input type="text" class="form-control" placeholder="Enter Youtube Video Link">
-					  </div>
-					  <a class="remove-video" href=""><i class="fa fa-times-circle-o"></i> Remove</a>
-				  </div>
-				  </ul>
-				  <ul class="attachments nav nav-pills nav-justified">
-				  	<li><a href=""><i class="fa fa-camera"></i> Add Photos</a></li>
-					<li><a href=""><i class="fa fa-youtube"></i> Add a Video</a></li>
-				  </ul>
-		  	  </div>
-			  <button type="submit" class="btn btn-success btn-block">Post</button>
-		  </form>
-      </div>
-    </div>
-  </div>
-</div>
+<%= partial "partials/share-form" %>

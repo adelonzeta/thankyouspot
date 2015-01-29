@@ -378,16 +378,6 @@ a {
 		.attachments {
 			margin-top: 15px;
 		}
-		.shared-post {
-			border: solid 1px #efefef;
-			margin-top: 20px;
-			background: #fcfcfc;
-			.post {
-				background: #fcfcfc;
-				box-shadow: none;
-				margin: 0;
-			}
-		}
 	}
 	.foot {
 		.actions {
@@ -465,10 +455,20 @@ a {
 			p {
 				font-size: 1.5em;
 				font-weight: 300;
-				line-height: 1.8em;
 				padding: 10px;
 			}
 		}
+	}
+}
+
+.shared-post {
+	border: solid 1px #efefef;
+	margin-top: 20px;
+	background: #fcfcfc;
+	.post {
+		background: #fcfcfc;
+		box-shadow: none;
+		margin: 0;
 	}
 }
 
@@ -553,6 +553,9 @@ a {
 		h1 {
 			margin: 30px 0 20px;
 			font-weight: 300;
+		}
+		.lead {
+			margin-bottom: 40px;
 		}
 		.btn {
 			margin: 0 5px;
@@ -699,4 +702,8 @@ a {
 	border: none;
 	border-radius: 4px;
 	padding: 10px;
+}
+
+.fixed-textarea {
+	resize: none;
 }

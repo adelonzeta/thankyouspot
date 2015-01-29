@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	$('.photoset-grid-lightbox').photosetGrid({
 	  highresLinks: true,
-	  rel: 'withhearts-gallery',
+	  rel: 'post-photos',
 	  gutter: '2px',
 
 	  onComplete: function(){
@@ -27,12 +27,17 @@ $(document).ready(function () {
 		$(this).parent().siblings(".media-left").hide();
 		$(this).attr("rows","1");
 	});
-	
 	$(".post .comments .btn-default").click(function () {
 		$(this).hide();
 		$(this).siblings(".btn").hide();
 		$(this).parent().siblings(".media-left").hide();
 		$(this).siblings("textarea").attr("rows","1");
 		return false;
+	});
+	
+	// NavBar Searchbox
+	$(".navbar div.navbar-collapse").on('click',function(e){
+	    if(e.target != this) return;
+	    $(".navbar input").focus();
 	});
 });
