@@ -7,32 +7,32 @@ layout: user
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<img class="img-circle" width="180px" src="/images/sample-thumbs/2.jpg">
+				<%= image_tag 'sample-thumbs/2.jpg', :class => 'img-circle', :width => '180' %>
 				<h1>Ian Delgado</h1>
 				<p class="lead"> I love nature. I love cats and dogs. I love photography. I love music. I respect life and other person's point of view. I don't judge anyone.</p>
 				<a href="" class="btn btn-success btn-lg" data-toggle="modal" data-target="#sayThanksForm"><i class="fa fa-pencil"></i> Say Thanks</a>
 				<a href="" class="btn btn-default btn-lg"><i class="fa fa-plus-circle"></i> Follow</a>
 				<ul class="nav nav-pills nav-justified">
 					<li class="active">
-						<a href="">
+						<a role="tab" data-toggle="tab" href="#user-recognitions">
 							<small>Recognitions</small>
 							<span>230k</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a role="tab" data-toggle="tab" href="#user-posts">
 							<small>Posts</small>
 							<span>230k</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a role="tab" data-toggle="tab" href="#user-followers">
 							<small>Followers</small>
 							<span>230k</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a role="tab" data-toggle="tab" href="#user-following">
 							<small>Following</small>
 							<span>230k</span>
 						</a>
@@ -44,16 +44,56 @@ layout: user
 </header>
 <section>
 	<div class="container">
-		<div class="row">
-			<% for i in 1..2 %>
-			<div class="col-md-6">
-				<% for i in 1..5 %>
-				<%= partial "partials/recognition" %>
-				<% end %>
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="user-recognitions">
+				<div class="row">
+					<% for i in 1..2 %>
+					<div class="col-md-6">
+						<% for i in 1..5 %>
+						<%= partial "partials/recognition" %>
+						<% end %>
+					</div>
+					<% end %>
+				</div>
+				<a href="" class="show-more btn btn-default btn-block">Show more</a>
 			</div>
-			<% end %>
-		</div>
-		<a href="" class="show-more btn btn-default btn-block">Show more</a>
+			<div role="tabpanel" class="tab-pane active" id="user-posts">
+				<div class="row">
+					<% for i in 1..2 %>
+					<div class="col-md-6">
+						<% for i in 1..5 %>
+						<%= partial "partials/post" %>
+						<% end %>
+					</div>
+					<% end %>
+				</div>
+				<a href="" class="show-more btn btn-default btn-block">Show more</a>
+			</div>
+			<div role="tabpanel" class="tab-pane active" id="user-followers">
+				<% for i in 1..5 %>
+				<div class="row">
+					<% for i in 1..4 %>
+					<div class="col-md-3">
+						<%= partial "partials/profile-widget-1" %>
+					</div>
+					<% end %>
+				</div>
+				<% end %>
+				<a href="" class="show-more btn btn-default btn-block">Show more</a>
+			</div>
+			<div role="tabpanel" class="tab-pane active" id="user-following">
+				<% for i in 1..5 %>
+				<div class="row">
+					<% for i in 1..4 %>
+					<div class="col-md-3">
+						<%= partial "partials/profile-widget-1" %>
+					</div>
+					<% end %>
+				</div>
+				<% end %>
+				<a href="" class="show-more btn btn-default btn-block">Show more</a>
+			</div>
+		</div> <!-- tab-content -->
 	</div>
 </section>
 <!-- Modal -->
@@ -71,7 +111,7 @@ layout: user
 				  <div class="attached-photos" style="display:none;">
 					  <% for i in 1..4 %>
 					  <div class="photo">
-					  	<img src="/images/demo/nyc1-500px.jpg" />
+						<%= image_tag 'demo/nyc1-500px.jpg' %>
 						<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
 					  </div>
 					  <% end %>

@@ -1,0 +1,40 @@
+.newsfeed {
+	padding-top: 50px;
+	section {
+		padding-top: 30px;
+	}
+	.caps {
+		text-transform: uppercase;
+		color: lighten(@gray-base, 50%);
+		margin-bottom: 15px;
+	}
+	.newsfeed-navigation {
+		box-shadow: 0 1px 2px 0 rgba(100, 100, 100, 0.2);
+		border-radius: 4px;
+		overflow: hidden;
+		li {
+			a {
+				background: #fff;
+				padding: 30px;
+				color: lighten(@gray-base, 50%);
+				border-radius: 0;
+				border-left: solid 1px #efefef;
+				text-transform: uppercase;
+				&:hover, &:focus {
+					color: lighten(@gray-base, 10%);
+				}
+			}
+			&:first-child {
+				a {
+					border: none;
+				}
+			}
+			&.current {
+				a {
+					font-weight: bold;
+					color: lighten(@gray-base, 10%);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,131 @@
+.post {
+	background: #fff;
+	box-shadow: 0 1px 2px 0 rgba(100, 100, 100, 0.2);
+	border-radius: 4px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	
+	.head {
+		padding: 15px;
+		position: relative;
+		h4 {
+			margin-top: 5px;
+			a {
+				color: #555;
+			}
+			span {
+				font-weight: 400;
+				font-size: 1em;
+				color: lighten(@gray-base, 25%);
+			}
+		}
+		.btn {
+			color: #555;
+			display: none;
+			border: none;
+			position: absolute;
+			top: 5px;
+			right: 5px;
+		}
+	}
+	.body {
+		padding: 0 15px 15px;
+		p {
+			margin: 0;
+		}
+		.attachments {
+			margin-top: 15px;
+		}
+	}
+	.foot {
+		.actions {
+			padding: 0 15px 15px;
+			.nav {
+				li {
+					a {
+						color: #777;
+						
+						&:hover, &:active {
+							color: darken(#777, 15%);
+						}
+					}
+				}
+			}
+			.pull-left {
+				.nav li a {
+					padding: 0 10px 0 0;
+				}
+			}
+			.pull-right {
+				.nav li a {
+					padding: 0 0 0 10px;
+				}
+			}
+		}
+		.comments {
+			padding: 15px;
+			background: #FAF9F7;
+			.show-all {
+				color: #777;
+				&:hover, &:active {
+					color: darken(#777, 15%);
+				}
+			}
+			.media {
+				.media-left{
+					padding-top: 10px;
+				}
+				h5 {
+					a {
+						color: #555;
+					}
+				}
+				p {
+					margin: 0;
+				}
+			}
+			form {
+				margin-top: 15px;
+				.media {
+					.media-left {
+						padding-top: 2px;
+						display: none;
+					}
+					.media-body {
+						textarea {
+							resize: none;
+						}
+						.btn {
+							margin-top: 10px;
+							margin-right: 5px;
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	&:hover .head .btn {
+		display: block;
+	}
+	&.recognition {
+		.body {
+			p {
+				font-size: 1.5em;
+				font-weight: 300;
+				padding: 10px;
+			}
+		}
+	}
+}
+
+.shared-post {
+	border: solid 1px #efefef;
+	margin-top: 20px;
+	background: #fcfcfc;
+	.post {
+		background: #fcfcfc;
+		box-shadow: none;
+		margin: 0;
+	}
+}

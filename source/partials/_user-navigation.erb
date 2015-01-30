@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/newsfeed.html" class="navbar-brand"><img src="/images/logo-user.png" /></a>
+      <a href="/newsfeed.html" class="navbar-brand"><%= image_tag 'logo-user.png' %></a>
     </div>
     <div id="navigation-collapse" class="collapse navbar-collapse">
 		<form class="navbar-form navbar-left" role="search">
@@ -29,7 +29,7 @@
 				  <a href="">
 					<div class="media">
 						<span class="media-left">
-							<img width="50px" height="50px" src="https://pacdn.500px.org/2867803/5ab80846b53a3391c51a9e14716c6a70036e10fc/1.jpg?4">
+							<%= image_tag 'sample-thumbs/2.jpg', :height => '50', :width => '50' %>
 						</span>
 						<div class="media-body">
 						  <p><strong>Ian Delgado</strong> started following you.</p>
@@ -57,7 +57,7 @@
 		  </li>
 		  <li class="dropdown">
 		    <a aria-expanded="false" role="button" aria-haspopup="true" data-toggle="dropdown" class="dropdown-toggle" href="#" id="nav-user" >
-		      <img src="/images/profile-thumb.jpg" />
+		      <%= image_tag 'profile-thumb.jpg' %>
 		    </a>
 			<ul class="dropdown-menu">
   		      <li role="presentation"><a href="/profile.html" tabindex="-1" role="menuitem"><h5>Oprah Winfrey</h5><small>View Profile</small></a></li>
@@ -75,7 +75,7 @@
 					  <div class="attached-photos" style="display:none;">
 						  <% for i in 1..4 %>
 						  <div class="photo">
-						  	<img src="/images/demo/nyc1-500px.jpg" />
+							<%= image_tag 'demo/nyc1-500px.jpg' %>
 							<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
 						  </div>
 						  <% end %>

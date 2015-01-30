@@ -1,11 +1,13 @@
-<div class="profile-widget-1">
-	<div class="header" style="background: url(/images/sample-thumbs/profile-header1.jpg) no-repeat center / cover gray;"></div>
-	<a href=""><img class="img-rounded photo" src="/images/sample-thumbs/0.jpg"></a>
-	
-	<div class="progress">
-	  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%"></div>
+<div class="thumbnail profile-widget-1">
+	<a href=""><%= image_tag 'sample-thumbs/1.jpg', :class => 'img-responsive' %></a>
+	<div class="caption">
+		<a href="">
+			<h4><%= lorem.first_name %> <%= lorem.last_name %></h4>
+			<p><%= truncate(lorem.paragraph, :length => 50) %></p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
 	</div>
-	<h4>Oprah Winfrey</h4>
-	<p><a href="">Edit Profile</a></p>
-	<a href="" class="btn btn-success btn-block"><i class="fa fa-plus-circle"></i> Confirm Email <small>(+10%)</small></a>
 </div>

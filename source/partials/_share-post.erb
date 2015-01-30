@@ -2,7 +2,7 @@
 	<div class="head">
 		<div class="media">
 		  <a class="media-left" href="#">
-		    <img class="img-rounded" src="/images/sample-thumbs/2.jpg" width="50" />
+			<%= image_tag 'sample-thumbs/2.jpg', :class => 'img-rounded', :width => '50' %>
 		  </a>
 		  <div class="media-body">
 		    <h4 class="media-heading"><a href=""><%= lorem.first_name %> <%= lorem.last_name %></a></h4>
@@ -37,7 +37,7 @@
 			<% for i in 1..2 %>
 			<div class="media">
 			  <a class="media-left" href="#">
-			    <img class="img-circle" src="/images/sample-thumbs/4.jpg" width="30">
+				<%= image_tag 'sample-thumbs/4.jpg', :class => 'img-circle', :width => '30' %>
 			  </a>
 			  <div class="media-body">
 				<h5><a href=""><%= lorem.first_name %> <%= lorem.last_name %></a> <small>3 minutes ago</small></h5>
@@ -48,7 +48,7 @@
 			<form>
 				<div class="media">
 		  			<a class="media-left" href="#">
-		  			  <img class="img-circle" src="/images/sample-thumbs/4.jpg" width="30">
+					  <%= image_tag 'sample-thumbs/4.jpg', :class => 'img-circle', :width => '30' %>
 		  			</a>
 					<div class="media-body">
 						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>

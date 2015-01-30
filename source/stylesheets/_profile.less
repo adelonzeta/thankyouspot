@@ -1,0 +1,100 @@
+.profile {
+	padding-top: 50px;
+	header {
+		background: #fff;
+		text-align: center;
+		padding: 80px 0 0;
+		h1 {
+			margin: 30px 0 20px;
+			font-weight: 300;
+		}
+		.lead {
+			margin-bottom: 40px;
+		}
+		.btn {
+			margin: 0 5px;
+		}
+		.nav {
+			margin: 80px 0 20px;
+			li {
+				a {
+					padding: 0;
+					small {
+						color: lighten(@gray-base, 50%);
+						display: block;
+						text-transform: uppercase;
+					}
+					span {
+						color: lighten(@gray-base, 15%);
+						font-size: 1.5em;
+					}
+				}
+				&.active {
+					a {
+						background: transparent;
+						small {
+							color: darken(@brand-primary, 15%);
+						}
+						span {
+							color: darken(@brand-primary, 25%);
+						}
+					}
+				}
+			}
+		}
+	}
+	section {
+		padding: 30px 0;
+	}
+	#sayThanksForm {
+		.modal-header {
+			border-bottom: 0;
+			padding: 60px 60px 0;
+			h4 {
+				
+			}
+			.close {
+				font-size: 1em;
+			}
+		}
+		.modal-body {
+			padding: 20px 60px 60px;
+			textarea {
+				padding: 20px;
+				resize: none;
+			}
+			.attachments {
+				margin-top: 20px;
+				li {
+					a {
+						border: solid 2px #fff;
+						background: #efefef;
+						color: lighten(@gray-base, 25%);
+					}
+				}
+			}
+			.btn {
+				padding: 10px;
+				font-weight: 700;
+			}
+			.attached-photos {
+				padding: 20px 20px 0;
+				.photo {
+					display: inline-block;
+					padding: 10px;
+					text-align: center;
+					img {
+						width: 85px;
+					}
+					a {
+						display: block;
+						color: lighten(@gray-base, 25%);
+					}
+				}
+			}
+			.attached-video {
+				margin-top: 20px;
+			}
+		}
+	}
+}

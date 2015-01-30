@@ -49,66 +49,11 @@ layout: user
 		</div>
 		<% for i in 1..5 %>
 		<div class="row">
+			<% for i in 1..4 %>
 			<div class="col-md-3">
-				<div class="thumbnail">
-					<a href=""><img src="/images/sample-thumbs/1.jpg" class="img-responsive" /></a>
-					<div class="caption">
-						<a href="">
-							<h4><%= lorem.first_name %> <%= lorem.last_name %></h4>
-							<p><%= truncate(lorem.paragraph, :length => 50) %></p>
-							<ul class="nav nav-justified">
-								<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
-							</ul>
-						</a>
-						<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
-					</div>
-				</div>
+				<%= partial "partials/profile-widget-1" %>
 			</div>
-			<div class="col-md-3">
-				<div class="thumbnail">
-					<a href=""><img src="/images/sample-thumbs/2.jpg" class="img-responsive" /></a>
-					<div class="caption">
-						<a href="">
-							<h4><%= lorem.first_name %> <%= lorem.last_name %></h4>
-							<p><%= truncate(lorem.paragraph, :length => 50) %></p>
-							<ul class="nav nav-justified">
-								<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
-							</ul>
-						</a>
-						<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="thumbnail">
-					<a href=""><img src="/images/sample-thumbs/3.jpg" class="img-responsive" /></a>
-					<div class="caption">
-						<a href="">
-							<h4><%= lorem.first_name %> <%= lorem.last_name %></h4>
-							<p><%= truncate(lorem.paragraph, :length => 50) %></p>
-							<ul class="nav nav-justified">
-								<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
-							</ul>
-						</a>
-						<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="thumbnail">
-					<a href=""><img src="/images/sample-thumbs/4.jpg" class="img-responsive" /></a>
-					<div class="caption">
-						<a href="">
-							<h4><%= lorem.first_name %> <%= lorem.last_name %></h4>
-							<p><%= truncate(lorem.paragraph, :length => 50) %></p>
-							<ul class="nav nav-justified">
-								<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
-							</ul>
-						</a>
-						<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
-					</div>
-				</div>
-			</div>
+			<% end %>
 		</div>
 		<% end %>
 		<a href="" class="show-more btn btn-default btn-block">Show more</a>
