@@ -1,19 +1,6 @@
 $(document).ready(function () {
-	$('.photoset-grid-lightbox').photosetGrid({
-	  highresLinks: true,
-	  rel: 'post-photos',
-	  gutter: '2px',
-
-	  onComplete: function(){
-	    $('.photoset-grid-lightbox').attr('style', '');
-	    $('.photoset-grid-lightbox a').colorbox({
-	      photo: true,
-	      scalePhotos: true,
-	      maxHeight:'90%',
-	      maxWidth:'90%'
-	    });
-	  }
-	});
+	// Post Photo-Grid
+	$('.photoset-grid-basic').photosetGrid();
 	
 	// Activate Bootstrap Tooltip
 	$('[data-toggle="tooltip"]').tooltip();
