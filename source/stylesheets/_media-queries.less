@@ -1,0 +1,81 @@
+@media (max-width: 768px) {
+	.navbar {
+		.navbar-collapse {
+			padding: 0;
+		}
+		.navbar-form {
+			width: 100%;
+			margin: 0;
+			border-bottom: none;
+			padding-bottom: 0;
+			button {
+				float: left;
+				margin-right: 5px;
+				padding: 0;
+			}
+			.form-group {
+				display: inline-block;
+				input {
+					padding: 0;
+				}
+			}
+		}
+		.navbar-nav {
+			margin: 0;
+		}
+		.navbar-right {
+			li {
+				a#nav-user {
+					padding: 10px 15px;
+				}
+				&.dropdown-notification {
+					.dropdown-menu {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+	.discover, .profile {
+		.center-block {
+			width: auto;
+			li {
+				float: none;
+			}
+		}
+		.profile-widget-1 {
+			height: auto;
+			img {
+				width: 100%;
+			}
+			.btn {
+				position: static;
+			}
+		}
+	}
+	.user-footer {
+		.clearfix {
+			position: relative;
+			height: 100px;
+			div {
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				&.pull-left {
+					top: 0;
+					ul {
+						margin: 0 auto;
+						display: inline-block;
+					}
+				}
+				&.pull-right {
+					top: 50px;
+				}
+			}
+		}
+		.nav-pills {
+			width: auto;
+		}
+	}
+	
+}

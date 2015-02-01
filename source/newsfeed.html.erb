@@ -3,7 +3,7 @@ title: What's Happening
 layout: user
 ---
 
-<section>
+<section class="hidden-xs">
 	<div class="container">
 		<ul class="nav nav-pills nav-justified newsfeed-navigation">
 			<li class="current">
@@ -23,20 +23,24 @@ layout: user
 </section>
 <section>
 	<div class="container">
-		<div class="row">
+		<div class="row post-feed">
 			<div class="col-md-6">
-				<% for i in 1..2 %>
 				<%= partial "partials/share-post" %>
-				<%= partial "partials/post" %>
-				<%= partial "partials/recognition" %>
-				<% end %>
 			</div>
 			<div class="col-md-6">
-				<% for i in 1..2 %>
+				<%= partial "partials/post" %>
+			</div>
+			<div class="col-md-6">
 				<%= partial "partials/recognition" %>
+			</div>
+			<div class="col-md-6">
+				<%= partial "partials/share-post" %>
+			</div>
+			<div class="col-md-6">
 				<%= partial "partials/post" %>
-				<%= partial "partials/post" %>
-				<% end %>
+			</div>
+			<div class="col-md-6">
+				<%= partial "partials/recognition" %>
 			</div>
 		</div>
 		<a href="" class="show-more btn btn-default btn-block">Show more</a>

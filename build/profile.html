@@ -1,0 +1,2099 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Ian Delgado</title>
+    
+    <link href="stylesheets/colorbox.css" rel="stylesheet" type="text/css" /><link href="stylesheets/main.css" rel="stylesheet" type="text/css" />
+    <script src="javascripts/vendor/jquery.js" type="text/javascript"></script><script src="javascripts/vendor/bootstrap.js" type="text/javascript"></script><script src="javascripts/vendor/jquery.photoset-grid.js" type="text/javascript"></script><script src="javascripts/vendor/jquery.colorbox.js" type="text/javascript"></script><script src="javascripts/design.js" type="text/javascript"></script>
+	<link href="images/favicon.ico" rel="icon" type="image/ico" />
+  </head>
+  <body class="profile">
+	<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button data-target="#navigation-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/newsfeed.html" class="navbar-brand"><img src="images/logo-user.png" /></a>
+    </div>
+    <div id="navigation-collapse" class="collapse navbar-collapse">
+		<form class="navbar-form navbar-left" role="search">
+			<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+		  <div class="form-group">
+		    <input type="text" class="form-control" placeholder="Search">
+		  </div>
+		</form>
+	  <ul class="nav navbar-nav navbar-right">
+		  <li><a href="/newsfeed.html">News Feed</a></li>
+          <li><a href="/discover.html">Discover</a></li>
+		  <li class="dropdown dropdown-notification">
+		    <!-- Add class "has-notification" -->
+			<a aria-expanded="false" role="button" aria-haspopup="true" data-toggle="dropdown" class="dropdown-toggle" href="#" id="nav-notifications">
+		      <i class="fa fa-bell hidden-xs"></i> <span class="visible-xs">Notifications</span> <!-- Replace with the number of unread notifications -->
+		    </a>
+		    <ul aria-labelledby="nav-notifications" role="menu" class="dropdown-menu">
+			  <li class="dropdown-header hidden-xs">Notifications</li>
+		      <li class="unread">
+				  <a href="">
+					<div class="media">
+						<span class="media-left">
+							<img height="50" width="50" src="images/sample-thumbs/2.jpg" />
+						</span>
+						<div class="media-body">
+						  <p><strong>Ian Delgado</strong> started following you.</p>
+							<small>3 days ago</small>
+						</div>
+					</div>
+				  </a>
+		      </li>
+		      <li class="read">
+				  <a href="">
+					<div class="media">
+						<span class="media-left">
+							<img height="50" width="50" src="images/sample-thumbs/2.jpg" />
+						</span>
+						<div class="media-body">
+						  <p><strong>Ian Delgado</strong> started following you.</p>
+							<small>3 days ago</small>
+						</div>
+					</div>
+				  </a>
+		      </li>
+		      <li class="read">
+				  <a href="">
+					<div class="media">
+						<span class="media-left">
+							<img height="50" width="50" src="images/sample-thumbs/2.jpg" />
+						</span>
+						<div class="media-body">
+						  <p><strong>Ian Delgado</strong> started following you.</p>
+							<small>3 days ago</small>
+						</div>
+					</div>
+				  </a>
+		      </li>
+		      <li class="read">
+				  <a href="">
+					<div class="media">
+						<span class="media-left">
+							<img height="50" width="50" src="images/sample-thumbs/2.jpg" />
+						</span>
+						<div class="media-body">
+						  <p><strong>Ian Delgado</strong> started following you.</p>
+							<small>3 days ago</small>
+						</div>
+					</div>
+				  </a>
+		      </li>
+		      <li class="read">
+				  <a href="">
+					<div class="media">
+						<span class="media-left">
+							<img height="50" width="50" src="images/sample-thumbs/2.jpg" />
+						</span>
+						<div class="media-body">
+						  <p><strong>Ian Delgado</strong> started following you.</p>
+							<small>3 days ago</small>
+						</div>
+					</div>
+				  </a>
+		      </li>
+		    </ul>
+		  </li>
+		  <li class="dropdown">
+		    <a aria-expanded="false" role="button" aria-haspopup="true" data-toggle="dropdown" class="dropdown-toggle" href="#" id="nav-user" >
+		      <img class="hidden-xs" src="images/profile-thumb.jpg" /> <span class="visible-xs">Profile</span>
+		    </a>
+			<ul class="dropdown-menu">
+  		      <li role="presentation"><a href="/profile.html" tabindex="-1" role="menuitem"><h5>Oprah Winfrey</h5><small>View Profile</small></a></li>
+  		      <li class="divider" role="presentation"></li>
+  			  <li role="presentation"><a href="/settings.html" tabindex="-1" role="menuitem">Account Settings</a></li>
+  		      <li role="presentation"><a href="" tabindex="-1" role="menuitem">Sign Out</a></li>
+			</ul>	    
+		  </li>
+		  <li class="dropdown">
+			  <a href="#" data-toggle="dropdown" class="dropdown-toggle" href="#" id="post-btn"><i class="fa fa-quote-left"></i> Share</a>
+			  <form class="dropdown-menu compose-form">
+				  <div class="text form-group">
+				      <label><i class="fa fa-quote-left"></i></label>
+				      <textarea class="form-control" rows="3" placeholder="Share what's new..."></textarea>
+					  <div class="attached-photos" style="display:none;">
+						  <div class="photo">
+							<img src="images/demo/nyc1-500px.jpg" />
+							<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+						  </div>
+						  <div class="photo">
+							<img src="images/demo/nyc1-500px.jpg" />
+							<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+						  </div>
+						  <div class="photo">
+							<img src="images/demo/nyc1-500px.jpg" />
+							<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+						  </div>
+						  <div class="photo">
+							<img src="images/demo/nyc1-500px.jpg" />
+							<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+						  </div>
+					  </div>
+					  <div class="attached-video" style="display:none;">
+						  <div class="input-group">
+						    <span class="input-group-addon"><i class="fa fa-youtube"></i></span>
+						    <input type="text" class="form-control" placeholder="Enter Youtube Video Link">
+						  </div>
+						  <a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+					  </div>
+				  </div>
+				  <div class="actions form-group clearfix">
+					  <ul class="nav nav-pills pull-left">
+					    <li><a href=""><i class="fa fa-camera"></i></a></li>
+					    <li><a href=""><i class="fa fa-video-camera"></i></a></li>
+					  </ul>
+					  <div class="pull-right">
+  					  	<button type="submit" class="btn btn-primary">Share</button>
+					  </div>
+				  </div>
+			  </form>
+		  </li>
+	  </ul>
+    </div>
+  </div>
+</nav>
+    <header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<img class="img-circle" width="180" src="images/sample-thumbs/2.jpg" />
+				<h1>Ian Delgado</h1>
+				<p class="lead"> I love nature. I love cats and dogs. I love photography. I love music. I respect life and other person's point of view. I don't judge anyone.</p>
+				<a href="" class="btn btn-success btn-lg" data-toggle="modal" data-target="#sayThanksForm"><i class="fa fa-pencil"></i> Say Thanks</a>
+				<a href="" class="btn btn-default btn-lg"><i class="fa fa-plus-circle"></i> Follow</a>
+				<ul class="nav nav-pills nav-justified">
+					<li class="active">
+						<a role="tab" data-toggle="tab" href="#user-recognitions">
+							<small>Recognitions</small>
+							<span>230k</span>
+						</a>
+					</li>
+					<li>
+						<a role="tab" data-toggle="tab" href="#user-posts">
+							<small>Posts</small>
+							<span>230k</span>
+						</a>
+					</li>
+					<li>
+						<a role="tab" data-toggle="tab" href="#user-followers">
+							<small>Followers</small>
+							<span>230k</span>
+						</a>
+					</li>
+					<li>
+						<a role="tab" data-toggle="tab" href="#user-following">
+							<small>Following</small>
+							<span>230k</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+<section>
+	<div class="container">
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="user-recognitions">
+				<div class="row post-feed">
+					<div class="col-md-6">
+						<div class="post recognition">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Francesca Henry</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Ea aliquam fugiat enim officiis optio reiciendis dolores est et voluptates error. in et et ea et quis et voluptatem quidem sunt ab. magni assumenda quas voluptates et. ad earum non aliquam distinctio aut animi doloribus nihil natus et</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Guy Harvey</a> <small>3 minutes ago</small></h5>
+			    <p>Saepe aut et voluptatem rerum et voluptate</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Marsha Love</a> <small>3 minutes ago</small></h5>
+			    <p>Laudantium a voluptatibus voluptas ut ea provident sit velit eligendi doloribus</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post recognition">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Judith Walsh</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Eos ea aut et quas dolor. voluptatem eum perferendis voluptates blanditiis quaerat unde ea exercitationem unde ipsum tenetur veniam. nostrum totam occaecati dicta consequuntur natus autem atque ea voluptas. deserunt voluptas eveniet aperiam quia asperiores sed ullam eius cupiditate quibusdam</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Kaleigh Case</a> <small>3 minutes ago</small></h5>
+			    <p>Sed aliquid modi dicta iure est cumque beatae rerum magni adipisci modi fugiat voluptate</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Fatima Cross</a> <small>3 minutes ago</small></h5>
+			    <p>Et est odit magnam iste aliquam animi voluptas nam soluta</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post recognition">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Antonio Griffin</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Beatae quae quae accusantium molestias ab ullam aperiam ad ipsum nobis sit illo velit. rerum illo labore natus. assumenda consequatur ut et occaecati exercitationem eos debitis iusto ea eum fugit aut ut facilis. voluptatem voluptatem vitae in pariatur tempora et possimus perspiciatis. itaque aut suscipit natus consequatur et atque excepturi dolorum iste aperiam molestiae et corrupti</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Billy Cassidy</a> <small>3 minutes ago</small></h5>
+			    <p>Accusamus unde sed voluptatem commodi voluptas omnis</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Shawn Abbott</a> <small>3 minutes ago</small></h5>
+			    <p>Laudantium libero quasi quam architecto</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post recognition">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Toby Moon</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Est et est libero illo modi assumenda impedit harum culpa. sint voluptas inventore officia assumenda harum est voluptas. reprehenderit sunt non ipsum qui voluptatem quia perferendis quasi perferendis</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Niall Snyder</a> <small>3 minutes ago</small></h5>
+			    <p>Animi autem accusantium iure accusamus ea esse similique asperiores omnis eaque explicabo</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Carley Cassidy</a> <small>3 minutes ago</small></h5>
+			    <p>Molestias eius et dolorem nulla sed odio autem doloribus eum similique minima labore ipsum molestiae</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post recognition">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Sonja Finch</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Aliquid molestias ducimus aspernatur dolorum. pariatur tempore nemo enim dolores cum et nesciunt rem corporis. vero similique animi nulla in. fuga culpa ullam non rerum totam omnis consequuntur. at recusandae facere qui adipisci aut cum est et vero id. asperiores ab similique consequatur autem consequatur aliquid. nostrum aperiam quia harum quis autem aut</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Constance Middleton</a> <small>3 minutes ago</small></h5>
+			    <p>Officia accusamus aut et est possimus ea corporis voluptate hic</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Hector Heath</a> <small>3 minutes ago</small></h5>
+			    <p>Hic odio soluta quo corporis</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+					</div>
+					<div class="col-md-6">
+						<div class="post recognition">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Caleb Hoyle</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Libero ut et et voluptatibus aut reprehenderit alias velit autem sit blanditiis. et libero deleniti soluta rem est earum velit accusamus ut dolor quod porro quis quibusdam. accusamus porro unde voluptatibus quia consequatur voluptas ducimus voluptatum dolores. laudantium quisquam quibusdam corporis necessitatibus soluta consequatur dolorem facilis ratione</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Eli Finch</a> <small>3 minutes ago</small></h5>
+			    <p>Maiores dolores esse sit ut sit quia ea velit</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Rafael Adkins</a> <small>3 minutes ago</small></h5>
+			    <p>Odio aut laborum et nesciunt id amet modi aut autem natus reprehenderit adipisci</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post recognition">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Kristi Watts</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Corrupti hic id deserunt ratione illo atque numquam ea reprehenderit quidem. voluptatem voluptatem animi aperiam dolore neque fuga eum omnis. eos sunt necessitatibus consequuntur odio nemo consequatur cumque et saepe ut. architecto iusto aut et necessitatibus possimus veritatis consequatur</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Stephanie Jones</a> <small>3 minutes ago</small></h5>
+			    <p>Deleniti rerum quis neque maiores quia sint voluptates quo rerum ad minima</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Andre Vick</a> <small>3 minutes ago</small></h5>
+			    <p>Cumque earum deleniti in est dicta facilis omnis dolores eaque</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post recognition">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Daryl Stevenson</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Eaque adipisci velit error a. molestiae ex praesentium cupiditate id et nulla veniam dolores. qui quidem id rem cum ut mollitia aut et. perferendis maiores odio quo ullam aut dicta</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Brenden James</a> <small>3 minutes ago</small></h5>
+			    <p>Rerum amet autem est et eum sequi ex veniam ut et</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Patrick Thornton</a> <small>3 minutes ago</small></h5>
+			    <p>Expedita dolores facere exercitationem et repellat explicabo quos soluta iure reprehenderit earum sit</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post recognition">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Dalton Barton</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Atque laboriosam est ea cupiditate exercitationem occaecati totam. architecto eveniet eius reprehenderit et. voluptates et cupiditate ut blanditiis ut iste omnis tempora qui. atque aspernatur et enim eos tempora rerum ab optio accusantium nisi quos. quo impedit nostrum et fugit quia similique</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Marianne Weeks</a> <small>3 minutes ago</small></h5>
+			    <p>Quo similique error minima occaecati et fugiat nobis natus aut quasi qui eos similique ex</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Javon Garrett</a> <small>3 minutes ago</small></h5>
+			    <p>Accusantium iusto praesentium accusamus laboriosam blanditiis</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post recognition">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Tammie Thornton</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Itaque necessitatibus pariatur expedita repellendus veniam alias commodi expedita omnis aliquam sit veniam velit. officiis vel officia magni non possimus odio sequi quia nemo fuga qui repellat. ut voluptas vel molestiae enim ad maxime ratione iste. id earum eos non odio omnis. quia libero optio adipisci velit sit doloremque aliquid quis ab ducimus id saepe. est explicabo id voluptatibus placeat eum voluptatem dolorem ad eaque reiciendis ea voluptatem fugiat. alias voluptas quis voluptas eum</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Ashton Boykin</a> <small>3 minutes ago</small></h5>
+			    <p>Eos dolores nihil dolores incidunt ut voluptatem debitis minima suscipit est occaecati nam</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Monty Love</a> <small>3 minutes ago</small></h5>
+			    <p>Assumenda nemo nesciunt delectus velit rerum laudantium omnis repellat earum quis omnis dolores</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<a href="" class="show-more btn btn-default btn-block">Show more</a>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="user-posts">
+				<div class="row post-feed">
+					<div class="col-md-6">
+						<div class="post">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Luis Neal</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Dicta nesciunt repudiandae in veritatis et nisi. aut eaque doloribus optio. explicabo ea beatae fugit inventore aliquid error</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Alvin Ross</a> <small>3 minutes ago</small></h5>
+			    <p>Totam rerum ut ex sint quisquam et esse eos laudantium consequatur praesentium et voluptatum maxime</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Alma Henry</a> <small>3 minutes ago</small></h5>
+			    <p>Qui est sunt debitis id libero ea sit nemo qui</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Clinton Chandler</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Nam quibusdam rerum autem reiciendis reiciendis. quos doloribus sit qui veniam qui temporibus dolor perferendis soluta dolorem eius ratione pariatur. sit doloremque beatae error et suscipit nostrum adipisci quia consequatur. dolorum sint ipsa et</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Kyla Conner</a> <small>3 minutes ago</small></h5>
+			    <p>Unde laudantium eum ipsam doloribus quo dolores</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Allyson Rollins</a> <small>3 minutes ago</small></h5>
+			    <p>Blanditiis cupiditate aut officia praesentium nihil possimus cupiditate atque aut fugiat suscipit voluptatem</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Grady Justice</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Minima ab iusto sit consequuntur facilis labore dolorum. ea maxime consequatur ut occaecati et corporis soluta. laboriosam ut labore sed. a rerum corporis cum</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Arturo Harvey</a> <small>3 minutes ago</small></h5>
+			    <p>Consequatur ea odio maiores voluptatum cumque temporibus et exercitationem ea pariatur quae</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Cara Fox</a> <small>3 minutes ago</small></h5>
+			    <p>Magnam ea fugiat aut delectus aut voluptas</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Tonia Morse</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Labore quod magnam sit officiis quia aut ut sapiente ipsum natus quia numquam. sint aut aut pariatur et unde dolore id. laborum maxime voluptate similique quia a et eius et suscipit</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Javon Griffin</a> <small>3 minutes ago</small></h5>
+			    <p>Rem quas quia est hic incidunt qui unde nihil harum aut quos aut dolor</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Kieran Zhang</a> <small>3 minutes ago</small></h5>
+			    <p>Beatae sint vero quia vitae qui a amet quae quia natus doloribus</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Guy Welch</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Cupiditate rerum porro sit. et placeat odio itaque enim distinctio cumque iure sed voluptate occaecati. atque et et ipsum aperiam veniam quis nisi. maxime odio animi hic quas nam aut fugit quod veniam repudiandae dolore vel quia</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Ana Woodard</a> <small>3 minutes ago</small></h5>
+			    <p>Accusantium voluptas et repudiandae itaque aut deleniti est qui molestiae</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Ruby Chan</a> <small>3 minutes ago</small></h5>
+			    <p>Cupiditate qui quis et numquam fugiat</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+					</div>
+					<div class="col-md-6">
+						<div class="post">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Hector Goldstein</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Ut vitae ducimus rem magnam. reiciendis et tempora rerum sint reiciendis atque provident et sed quam consectetur incidunt. illum incidunt quos pariatur</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Fatima Morse</a> <small>3 minutes ago</small></h5>
+			    <p>Ea occaecati nihil nesciunt accusantium omnis officia mollitia debitis accusamus itaque omnis</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Kyra Case</a> <small>3 minutes ago</small></h5>
+			    <p>Odio sed sapiente consectetur magni vero autem odit neque blanditiis</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Antonio Joyce</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Amet consequuntur in exercitationem quo alias voluptas ullam praesentium cumque iusto enim natus. eveniet omnis eos sequi saepe expedita vitae. perferendis sequi atque ut reprehenderit doloremque nisi mollitia quaerat et distinctio est autem esse. expedita aspernatur eius voluptatem harum sunt maiores reiciendis veritatis animi ut qui distinctio. dolores et nihil qui nisi. ab quidem et ea quia. voluptatem autem et nisi sed culpa accusamus quasi perferendis iste cumque omnis similique eius delectus</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Quinn Moon</a> <small>3 minutes ago</small></h5>
+			    <p>Facilis voluptas qui fuga error perferendis repudiandae et esse voluptas neque consequatur totam quos</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Jared Eason</a> <small>3 minutes ago</small></h5>
+			    <p>Sunt molestias numquam aliquam cumque commodi neque exercitationem numquam illum distinctio ea perspiciatis</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Kenneth Choi</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Est vitae exercitationem rerum quia modi voluptatem. est nulla a laborum est quisquam eum culpa aspernatur veritatis et mollitia. consequatur voluptate quibusdam qui. quam aut laudantium culpa repellendus nam omnis accusamus itaque ut modi necessitatibus id. sunt dolor debitis est sit nobis qui voluptas porro et perspiciatis ut</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Ruby Nichols</a> <small>3 minutes ago</small></h5>
+			    <p>Ratione quis consequuntur accusantium</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Dora Adkins</a> <small>3 minutes ago</small></h5>
+			    <p>Consequatur dolor est vel recusandae saepe impedit</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Lori Pearson</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Sequi reprehenderit neque et pariatur commodi et. deserunt eveniet est officia. quidem voluptates aspernatur sit quia nobis doloremque eaque corrupti et quia. distinctio dolorum velit eum quibusdam quasi deleniti. aliquid necessitatibus enim dolor qui totam</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Noel Alexander</a> <small>3 minutes ago</small></h5>
+			    <p>Quae et in cumque veritatis ab iusto odio tempora voluptas eaque quidem</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Shirley Teague</a> <small>3 minutes ago</small></h5>
+			    <p>Odio et quia aut quos dolorem</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+						<div class="post">
+	<div class="head">
+		<div class="media">
+		  <a class="media-left" href="#">
+			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a href="">Sheryl Cooper</a></h4>
+		    <small>3 minutes ago</small>
+		  </div>
+		</div>
+		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
+	</div>
+	<div class="body">
+		<p>Consequuntur consequatur repudiandae ipsum numquam et est maxime dolores fugiat veritatis ducimus. quo porro sit quia magnam fuga voluptatum qui sunt quia assumenda excepturi sit impedit. eaque qui repellat ad deleniti et blanditiis placeat. ad sint architecto adipisci aperiam. qui in aut alias sed dolores esse voluptatum illo qui molestias autem modi. voluptatibus et nobis et nulla quis sit modi numquam voluptatem facilis fugiat soluta expedita. adipisci voluptas sit eaque consequatur nulla minima saepe cumque exercitationem quia quod</p>
+		<div class="attachments">
+			<div class="photoset-grid-lightbox" data-layout="13" style="visibility: hidden;">
+			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
+			  <img data-highres="images/demo/withhearts2-highres.jpg" src="images/demo/withhearts2-500px.jpg" />
+			  <img data-highres="images/demo/withhearts3-highres.jpg" src="images/demo/withhearts3-500px.jpg" />
+			  <img data-highres="images/demo/withhearts4-highres.jpg" src="images/demo/withhearts4-500px.jpg" />
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="actions clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li><a href="">Applaud</a></li>
+					<li><a href="">Comment</a></li>
+					<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="nav nav-pills">
+					<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+					<li><a><i class="fa fa-comment"></i> 8</a></li>
+					<li><a><i class="fa fa-share"></i> 0</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="comments">
+			<a href="" class="show-all">8 comments <i class="fa fa-angle-down"></i></a>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Trisha Solomon</a> <small>3 minutes ago</small></h5>
+			    <p>Culpa voluptatem totam excepturi perferendis dolore explicabo commodi quos officia</p>
+			  </div>
+			</div>
+			<div class="media">
+			  <a class="media-left" href="#">
+				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+			  </a>
+			  <div class="media-body">
+				<h5><a href="">Luis Lloyd</a> <small>3 minutes ago</small></h5>
+			    <p>Non voluptatibus expedita corporis dolores non sed quo tenetur eum consequatur necessitatibus</p>
+			  </div>
+			</div>
+			<form>
+				<div class="media">
+		  			<a class="media-left" href="#">
+					  <img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
+		  			</a>
+					<div class="media-body">
+						<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+						<input type="submit" class="btn btn-primary" value="Post comment" />
+						<a href="" class="btn btn-default">Cancel</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<a href="" class="show-more btn btn-default btn-block">Show more</a>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="user-followers">
+				<div class="row">
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Antoinette Watson</h4>
+			<p>Dignissimos autem nobis quaerat culpa. nulla vo...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Rylee Lucas</h4>
+			<p>Velit voluptatem non aperiam sequi veritatis si...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Randal Griffin</h4>
+			<p>Et facere dolores voluptatem veniam laudantium ...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Emiliano Sharpe</h4>
+			<p>Deleniti nisi sint ea blanditiis quod atque et ...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Gordon Marsh</h4>
+			<p>Rem amet sunt ratione voluptatem voluptatem min...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Dulce Jennings</h4>
+			<p>Perferendis illum voluptatem odit quae ullam ei...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Makenzie Welch</h4>
+			<p>Aut voluptatum ducimus non animi. dicta harum l...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Makenzie Adkins</h4>
+			<p>Provident distinctio et nihil nihil omnis archi...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Eliza Wagner</h4>
+			<p>Tempore voluptas non sit totam ex necessitatibu...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Colton MacDonald</h4>
+			<p>Velit debitis voluptatum voluptatem blanditiis ...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Colton Love</h4>
+			<p>Delectus dolorum occaecati exercitationem susci...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+				</div>
+				<a href="" class="show-more btn btn-default btn-block">Show more</a>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="user-following">
+				<div class="row">
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Casey James</h4>
+			<p>Necessitatibus accusantium est eaque ipsam cons...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Ty Farrell</h4>
+			<p>Aut modi quo est. qui tenetur quam maxime corpo...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Peggy Kennedy</h4>
+			<p>Et sed corporis dignissimos sunt laborum volupt...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Toby Hinton</h4>
+			<p>Eos explicabo quia ut sed doloribus nulla quia ...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Esmeralda Griffin</h4>
+			<p>Ipsam eum cum sunt dolorem vitae labore qui. re...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Tracy Steele</h4>
+			<p>Eveniet ipsum laborum iure recusandae illo quib...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="thumbnail profile-widget-1">
+	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
+	<div class="caption">
+		<a href="">
+			<h4>Vanessa Hardin</h4>
+			<p>Tempora labore repellat ut autem id ut exceptur...</p>
+			<ul class="nav nav-justified">
+				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
+			</ul>
+		</a>
+		<a href="" class="btn btn-block btn-lg" role="button"><i class="fa fa-thumbs-up"></i> Say Thanks</a>
+	</div>
+</div>
+					</div>
+				</div>
+				<a href="" class="show-more btn btn-default btn-block">Show more</a>
+			</div>
+		</div> <!-- tab-content -->
+	</div>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="sayThanksForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">Skip - View Ian's Profile</button>
+        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-pencil"></i> Say thanks to Ian!</h4>
+      </div>
+      <div class="modal-body">
+		  <form>
+		  	  <div class="form-group">
+		  	      <textarea class="form-control" rows="3" placeholder="What are you thankful for?"></textarea>
+				  <div class="attached-photos" style="display:none;">
+					  <div class="photo">
+						<img src="images/demo/nyc1-500px.jpg" />
+						<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+					  </div>
+					  <div class="photo">
+						<img src="images/demo/nyc1-500px.jpg" />
+						<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+					  </div>
+					  <div class="photo">
+						<img src="images/demo/nyc1-500px.jpg" />
+						<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+					  </div>
+					  <div class="photo">
+						<img src="images/demo/nyc1-500px.jpg" />
+						<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+					  </div>
+				  </div>
+				  <div class="attached-video" style="display:none;">
+					  <div class="input-group">
+					    <span class="input-group-addon"><i class="fa fa-youtube"></i></span>
+					    <input type="text" class="form-control" placeholder="Enter Youtube Video Link">
+					  </div>
+					  <a class="remove-video" href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+				  </div>
+				  </ul>
+				  <ul class="attachments nav nav-pills nav-justified">
+				  	<li><a href=""><i class="fa fa-camera"></i> Add Photos</a></li>
+					<li><a href=""><i class="fa fa-youtube"></i> Add a Video</a></li>
+				  </ul>
+		  	  </div>
+			  <button type="submit" class="btn btn-success btn-block">Post</button>
+		  </form>
+      </div>
+    </div>
+  </div>
+</div>
+	<footer class="user-footer">
+	<div class="container">
+		<div class="clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li class="brand"><a href="">Thankyouspot</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="/static.html">Terms</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<p>Copyright &copy; 2015. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+</footer>
+  </body>
+</html>

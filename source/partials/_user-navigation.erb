@@ -20,11 +20,12 @@
 		  <li><a href="/newsfeed.html">News Feed</a></li>
           <li><a href="/discover.html">Discover</a></li>
 		  <li class="dropdown dropdown-notification">
-		    <a aria-expanded="false" role="button" aria-haspopup="true" data-toggle="dropdown" class="dropdown-toggle" href="#" id="nav-notifications">
-		      <i class="fa fa-bell"></i>
+		    <!-- Add class "has-notification" -->
+			<a aria-expanded="false" role="button" aria-haspopup="true" data-toggle="dropdown" class="dropdown-toggle" href="#" id="nav-notifications">
+		      <i class="fa fa-bell hidden-xs"></i> <span class="visible-xs">Notifications</span> <!-- Replace with the number of unread notifications -->
 		    </a>
 		    <ul aria-labelledby="nav-notifications" role="menu" class="dropdown-menu">
-			  <li class="dropdown-header">Notifications</li>
+			  <li class="dropdown-header hidden-xs">Notifications</li>
 		      <li class="unread">
 				  <a href="">
 					<div class="media">
@@ -43,7 +44,7 @@
 				  <a href="">
 					<div class="media">
 						<span class="media-left">
-							<img width="50px" height="50px" src="https://pacdn.500px.org/2867803/5ab80846b53a3391c51a9e14716c6a70036e10fc/1.jpg?4">
+							<%= image_tag 'sample-thumbs/2.jpg', :height => '50', :width => '50' %>
 						</span>
 						<div class="media-body">
 						  <p><strong>Ian Delgado</strong> started following you.</p>
@@ -57,7 +58,7 @@
 		  </li>
 		  <li class="dropdown">
 		    <a aria-expanded="false" role="button" aria-haspopup="true" data-toggle="dropdown" class="dropdown-toggle" href="#" id="nav-user" >
-		      <%= image_tag 'profile-thumb.jpg' %>
+		      <%= image_tag 'profile-thumb.jpg', :class => 'hidden-xs' %> <span class="visible-xs">Profile</span>
 		    </a>
 			<ul class="dropdown-menu">
   		      <li role="presentation"><a href="/profile.html" tabindex="-1" role="menuitem"><h5>Oprah Winfrey</h5><small>View Profile</small></a></li>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Search - john</title>
+    
+    <link href="stylesheets/colorbox.css" rel="stylesheet" type="text/css" /><link href="stylesheets/main.css" rel="stylesheet" type="text/css" />
+    <script src="javascripts/vendor/jquery.js" type="text/javascript"></script><script src="javascripts/vendor/bootstrap.js" type="text/javascript"></script><script src="javascripts/vendor/jquery.photoset-grid.js" type="text/javascript"></script><script src="javascripts/vendor/jquery.colorbox.js" type="text/javascript"></script><script src="javascripts/design.js" type="text/javascript"></script>
+	<link href="images/favicon.ico" rel="icon" type="image/ico" />
+  </head>
+  <body class="static">
+	<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button data-target="#navigation-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/newsfeed.html" class="navbar-brand"><img src="images/logo-user.png" /></a>
+    </div>
+    <div id="navigation-collapse" class="collapse navbar-collapse">
+		<form class="navbar-form navbar-left" role="search">
+			<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+		  <div class="form-group">
+		    <input type="text" class="form-control" placeholder="Search">
+		  </div>
+		</form>
+	  <ul class="nav navbar-nav navbar-right">
+		  <li><a href="/newsfeed.html">News Feed</a></li>
+          <li><a href="/discover.html">Discover</a></li>
+		  <li class="dropdown dropdown-notification">
+		    <!-- Add class "has-notification" -->
+			<a aria-expanded="false" role="button" aria-haspopup="true" data-toggle="dropdown" class="dropdown-toggle" href="#" id="nav-notifications">
+		      <i class="fa fa-bell hidden-xs"></i> <span class="visible-xs">Notifications</span> <!-- Replace with the number of unread notifications -->
+		    </a>
+		    <ul aria-labelledby="nav-notifications" role="menu" class="dropdown-menu">
+			  <li class="dropdown-header hidden-xs">Notifications</li>
+		      <li class="unread">
+				  <a href="">
+					<div class="media">
+						<span class="media-left">
+							<img height="50" width="50" src="images/sample-thumbs/2.jpg" />
+						</span>
+						<div class="media-body">
+						  <p><strong>Ian Delgado</strong> started following you.</p>
+							<small>3 days ago</small>
+						</div>
+					</div>
+				  </a>
+		      </li>
+		      <li class="read">
+				  <a href="">
+					<div class="media">
+						<span class="media-left">
+							<img height="50" width="50" src="images/sample-thumbs/2.jpg" />
+						</span>
+						<div class="media-body">
+						  <p><strong>Ian Delgado</strong> started following you.</p>
+							<small>3 days ago</small>
+						</div>
+					</div>
+				  </a>
+		      </li>
+		      <li class="read">
+				  <a href="">
+					<div class="media">
+						<span class="media-left">
+							<img height="50" width="50" src="images/sample-thumbs/2.jpg" />
+						</span>
+						<div class="media-body">
+						  <p><strong>Ian Delgado</strong> started following you.</p>
+							<small>3 days ago</small>
+						</div>
+					</div>
+				  </a>
+		      </li>
+		      <li class="read">
+				  <a href="">
+					<div class="media">
+						<span class="media-left">
+							<img height="50" width="50" src="images/sample-thumbs/2.jpg" />
+						</span>
+						<div class="media-body">
+						  <p><strong>Ian Delgado</strong> started following you.</p>
+							<small>3 days ago</small>
+						</div>
+					</div>
+				  </a>
+		      </li>
+		      <li class="read">
+				  <a href="">
+					<div class="media">
+						<span class="media-left">
+							<img height="50" width="50" src="images/sample-thumbs/2.jpg" />
+						</span>
+						<div class="media-body">
+						  <p><strong>Ian Delgado</strong> started following you.</p>
+							<small>3 days ago</small>
+						</div>
+					</div>
+				  </a>
+		      </li>
+		    </ul>
+		  </li>
+		  <li class="dropdown">
+		    <a aria-expanded="false" role="button" aria-haspopup="true" data-toggle="dropdown" class="dropdown-toggle" href="#" id="nav-user" >
+		      <img class="hidden-xs" src="images/profile-thumb.jpg" /> <span class="visible-xs">Profile</span>
+		    </a>
+			<ul class="dropdown-menu">
+  		      <li role="presentation"><a href="/profile.html" tabindex="-1" role="menuitem"><h5>Oprah Winfrey</h5><small>View Profile</small></a></li>
+  		      <li class="divider" role="presentation"></li>
+  			  <li role="presentation"><a href="/settings.html" tabindex="-1" role="menuitem">Account Settings</a></li>
+  		      <li role="presentation"><a href="" tabindex="-1" role="menuitem">Sign Out</a></li>
+			</ul>	    
+		  </li>
+		  <li class="dropdown">
+			  <a href="#" data-toggle="dropdown" class="dropdown-toggle" href="#" id="post-btn"><i class="fa fa-quote-left"></i> Share</a>
+			  <form class="dropdown-menu compose-form">
+				  <div class="text form-group">
+				      <label><i class="fa fa-quote-left"></i></label>
+				      <textarea class="form-control" rows="3" placeholder="Share what's new..."></textarea>
+					  <div class="attached-photos" style="display:none;">
+						  <div class="photo">
+							<img src="images/demo/nyc1-500px.jpg" />
+							<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+						  </div>
+						  <div class="photo">
+							<img src="images/demo/nyc1-500px.jpg" />
+							<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+						  </div>
+						  <div class="photo">
+							<img src="images/demo/nyc1-500px.jpg" />
+							<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+						  </div>
+						  <div class="photo">
+							<img src="images/demo/nyc1-500px.jpg" />
+							<a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+						  </div>
+					  </div>
+					  <div class="attached-video" style="display:none;">
+						  <div class="input-group">
+						    <span class="input-group-addon"><i class="fa fa-youtube"></i></span>
+						    <input type="text" class="form-control" placeholder="Enter Youtube Video Link">
+						  </div>
+						  <a href=""><i class="fa fa-times-circle-o"></i> Remove</a>
+					  </div>
+				  </div>
+				  <div class="actions form-group clearfix">
+					  <ul class="nav nav-pills pull-left">
+					    <li><a href=""><i class="fa fa-camera"></i></a></li>
+					    <li><a href=""><i class="fa fa-video-camera"></i></a></li>
+					  </ul>
+					  <div class="pull-right">
+  					  	<button type="submit" class="btn btn-primary">Share</button>
+					  </div>
+				  </div>
+			  </form>
+		  </li>
+	  </ul>
+    </div>
+  </div>
+</nav>
+    <section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<h1>Terms of Service</h1>
+				<p>Last updated on January 17, 2015</p>
+				<hr />
+					<h3>aut voluptas quo</h3>
+					<p>Quos sed enim neque provident voluptatem nostrum quia ipsa placeat occaecati explicabo libero aliquid accusantium. corporis qui blanditiis et debitis est qui repellendus qui aliquid ducimus rerum tempora voluptates molestiae. et nihil non unde autem quia et corrupti enim ducimus. voluptates in qui aut ut dolorem molestiae laudantium nobis. qui officia aliquid tenetur officia omnis corporis porro debitis pariatur. odio sequi voluptatem eum voluptas laudantium non dolores quia ipsum tempora aliquid et</p>
+					<p>Eum et sunt vitae ut minus. neque vel est qui omnis perferendis consectetur. omnis qui eum aliquam ut amet illum expedita et repellat in. explicabo rerum officiis fuga fuga voluptas. natus ullam sequi molestiae incidunt expedita sunt qui inventore. tempore ducimus eum aut</p>
+					<p>Et vero adipisci tenetur sit at. et enim illo qui cupiditate. aut consequatur rerum officiis doloremque in</p>
+					<p>Et adipisci et fugiat fuga tempora ut non impedit. qui libero tenetur iusto impedit enim recusandae ut aperiam odit fugit repudiandae et numquam perferendis. totam qui deserunt eligendi inventore cumque qui autem. voluptatum excepturi aut ut quasi odio non dolor voluptatem quia. soluta doloremque blanditiis non natus incidunt vitae eius. autem est et blanditiis quasi nihil rerum voluptas sint odit voluptas aut id reprehenderit. error perspiciatis facere sed</p>
+					<p>Distinctio et et amet autem. sunt nostrum voluptatem non voluptas sint repellat molestias assumenda officiis autem eum culpa. consequatur sit dolorum beatae eum commodi. qui nemo maxime hic qui. sapiente veniam nobis cupiditate enim possimus nulla officiis assumenda vitae sed. laudantium tempora repudiandae reprehenderit dolores et quisquam eum</p>
+					<h3>deleniti amet ullam</h3>
+					<p>At ullam quia sequi id vel accusantium. dolores voluptas vitae incidunt ut quae ut officiis ad eos voluptate reprehenderit. fugiat omnis et iure nostrum voluptas et numquam voluptatibus. nihil ratione aut labore fugit. saepe hic neque numquam necessitatibus tempora. atque illum magnam aut sed. dicta consequatur est quis quia voluptatem aut</p>
+					<p>Consequatur rerum impedit repellat cumque. et officia quod eum unde libero voluptates soluta esse tenetur. voluptatem reiciendis et magnam blanditiis et. quisquam qui sit corporis unde ea architecto iure eaque repudiandae autem dolor repellendus explicabo. officiis maiores explicabo aut mollitia voluptatibus velit sed qui eum doloremque cumque recusandae. magnam fugiat labore quo voluptates</p>
+					<p>Porro omnis explicabo ab. provident rerum quia quos et mollitia voluptas accusantium dignissimos non molestiae voluptatibus ea error praesentium. est et facilis possimus velit laboriosam rerum. consequatur deleniti non dignissimos qui vero quidem eaque aut qui molestiae molestiae et impedit sunt. mollitia a aliquid et aut ea dolorum cumque unde ipsa vitae</p>
+					<p>Cupiditate qui repellendus quia eligendi eius rem dolores maxime fugit. minima aut ut dolor aut dolorem debitis soluta cumque blanditiis autem quibusdam cum amet. qui id molestiae id magnam qui id occaecati eligendi quaerat vitae et. illum voluptatem nulla odit non beatae debitis unde sed nemo corporis quis optio autem</p>
+					<p>Ex consequatur sint nostrum quia modi qui officia dolorum. aliquid ab qui atque. sint explicabo inventore mollitia et deleniti. aliquid iste atque quae dignissimos sunt necessitatibus enim dolorem. eum harum officia ut atque ut</p>
+					<h3>perferendis necessitatibus explicabo</h3>
+					<p>Blanditiis magnam eius odit porro ut occaecati magnam maiores reprehenderit. assumenda enim voluptatem hic architecto ipsum officiis non ipsa aperiam voluptatem non. debitis repellat quibusdam deleniti eveniet similique et esse quos. magni laudantium delectus corporis vel facere dolore earum consectetur error voluptate esse quidem</p>
+					<p>Est soluta recusandae id perferendis architecto atque praesentium. molestias ut saepe hic libero dolores accusantium explicabo et sit rerum odit quam. molestias voluptatem laudantium culpa molestiae consequatur est. illo at est esse rerum et vitae qui ea maiores expedita nulla in. animi amet quod aut quia illo dolorum consequatur incidunt omnis repudiandae. voluptatem earum iusto sint</p>
+					<p>Est quasi alias quos cum magnam soluta culpa. et illum doloribus sint et in. placeat quos vel unde. in est aut sed. recusandae est fugiat eaque quaerat eaque culpa dolore reprehenderit eligendi qui facere voluptatum</p>
+					<p>Nihil aspernatur qui quis libero. quae id sit veniam. et consequatur sed omnis laudantium architecto quidem saepe molestias. consequatur eius laboriosam quia vel qui rerum repellat voluptatum voluptatem soluta atque sed culpa. ut incidunt incidunt vitae</p>
+					<p>Ducimus sit nemo neque ipsa delectus consequatur sapiente qui. quia id fugit molestiae cumque ut dolores incidunt quo. et corporis amet earum aut. repudiandae sint excepturi necessitatibus quod omnis molestiae iure repellat</p>
+					<h3>quia ab corrupti</h3>
+					<p>Consequatur tempora aspernatur in rem aliquam voluptatem delectus deserunt eos rerum est. asperiores libero ullam officia ipsam et debitis beatae quae cum consequatur ad corporis. voluptate dolorum accusantium ut sit dolorem culpa laborum odit quis et delectus eligendi cumque. quis accusamus et sed illum dolores modi dolorem omnis quam et rem est harum. ut aspernatur placeat nihil consectetur</p>
+					<p>Et ab aliquid laboriosam. non similique culpa modi sed rerum aspernatur voluptates fuga vel aut quidem sunt. molestiae numquam impedit voluptate corporis corrupti. minus qui possimus iure est velit quis. delectus atque illum nam autem sit delectus laboriosam laboriosam dolor quo itaque maxime possimus beatae. similique sed quis quam similique. sunt consequatur dolor odit eligendi officiis quia cum placeat recusandae deserunt</p>
+					<p>Earum eaque rerum ipsum omnis doloribus id dolor quod. necessitatibus eum occaecati expedita. possimus rerum consequatur mollitia sunt. et esse unde et animi ullam et voluptatem minima qui dolor</p>
+					<p>Accusantium cupiditate quia consequatur asperiores sint quis voluptatum. amet pariatur eum consectetur et id et aperiam ut magnam. harum id consequatur in pariatur accusantium omnis rerum molestiae. facere non voluptas necessitatibus ipsum nihil consectetur. necessitatibus cumque nihil quia non eum aliquam distinctio beatae quia ducimus veniam non</p>
+					<p>Error eum incidunt inventore quidem cumque exercitationem eum et a. a perspiciatis eaque eveniet nostrum doloribus neque tempora repellat voluptatibus. voluptatem non dolorum dicta voluptatem laudantium et voluptatum et. numquam vero deleniti officia ullam sunt facilis qui fuga fuga corporis laboriosam nihil. beatae vel dolorum quia amet ea possimus quaerat vero expedita</p>
+					<h3>expedita facilis neque</h3>
+					<p>Aut velit dolor delectus modi dolorem voluptates dicta deserunt dolor delectus. nostrum sed voluptatem qui dolores. exercitationem est aliquid atque iure nisi dicta nemo quo aperiam quia. dolores quia assumenda est aut. doloremque quo sint consequatur. officiis et earum vel veritatis distinctio placeat quis fugit</p>
+					<p>Consequatur nihil in aut. aliquid alias itaque voluptatum odio ex. doloremque molestiae maxime quia. beatae est sit consequuntur et ut in doloremque eum assumenda consequatur</p>
+					<p>Consequatur consequatur dolorum corrupti. odit ut repudiandae laudantium est ut quis sed qui rerum voluptates nesciunt aut. qui nobis quo veritatis consequuntur quia. quisquam ut omnis quia. dignissimos mollitia doloribus praesentium incidunt dolores voluptates veritatis fugit qui quibusdam. deleniti odit placeat laborum rerum dolor quo odio vitae neque magnam in voluptatibus. animi magnam expedita adipisci nisi occaecati suscipit mollitia dolores laudantium quia</p>
+					<p>Assumenda et voluptate repellat beatae. nihil enim et repudiandae culpa et. fugit esse ab quo temporibus nulla tenetur distinctio consequuntur molestiae in. ut enim harum alias expedita odio fuga officia magnam ut dicta aut voluptates debitis voluptas</p>
+					<p>Et neque expedita quas illo qui ex. et commodi ut veritatis ut sed officiis consequatur earum sapiente deserunt porro magnam quidem magni. natus ducimus consectetur voluptatem labore dolorem ullam in voluptas aliquam tenetur accusamus deleniti. voluptas incidunt voluptates velit commodi aspernatur mollitia quia et</p>
+			</div>
+		</div>
+	</div>
+</section>
+	<footer class="user-footer">
+	<div class="container">
+		<div class="clearfix">
+			<div class="pull-left">
+				<ul class="nav nav-pills">
+					<li class="brand"><a href="">Thankyouspot</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="/static.html">Terms</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<p>Copyright &copy; 2015. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+</footer>
+  </body>
+</html>

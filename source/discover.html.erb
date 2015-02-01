@@ -9,7 +9,7 @@ layout: user
 			<div class="col-md-8 col-md-offset-2">
 				<h1>Find someone you'd like to thank, or <a href="#" data-toggle="modal" data-target="#invite-form">invite your friends</a> to join the community.</h1>
 				<br />
-				<ul class="nav nav-pills center-block" style="width:525px;">
+				<ul class="nav nav-pills center-block">
 				  <li class="active"><a href="">Popular</a></li>
 				  <li><a href="">Trending</a></li>
 				  <li><a href="">New to Thankyouspot</a></li>
@@ -47,15 +47,15 @@ layout: user
 		    </div>
 		  </div>
 		</div>
-		<% for i in 1..5 %>
+		
 		<div class="row">
-			<% for i in 1..4 %>
-			<div class="col-md-3">
+			<% for i in 1..11 %>
+			<div class="col-md-3 col-sm-4 col-xs-12">
 				<%= partial "partials/profile-widget-1" %>
 			</div>
 			<% end %>
 		</div>
-		<% end %>
+		
 		<a href="" class="show-more btn btn-default btn-block">Show more</a>
 	</div>
 </section>
