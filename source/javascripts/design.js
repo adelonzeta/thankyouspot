@@ -27,4 +27,8 @@ $(document).ready(function () {
 	    if(e.target != this) return;
 	    $(".navbar input").focus();
 	});
+	
+	$(window).resize(function(){
+	    $('.photoset-grid-basic').photosetGrid();
+	});
 });

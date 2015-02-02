@@ -42,63 +42,65 @@
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-5 hidden-xs">
-						<div class="head">
-							<div class="media">
-							  <a class="media-left" href="#">
-								<%= image_tag 'sample-thumbs/2.jpg', :class => 'img-rounded', :width => '50' %>
-							  </a>
-							  <div class="media-body">
-							    <h4 class="media-heading"><a href=""><%= lorem.first_name %> <%= lorem.last_name %></a></h4>
-							    <small>3 minutes ago</small>
-							  </div>
-							</div>
-						</div>
-						<div class="body">
-							<p><%= lorem.paragraph %></p>
-						</div>
-						<div class="foot">
-							<div class="actions clearfix">
-								<div class="pull-left">
-									<ul class="nav nav-pills">
-										<li><a href="">Applaud</a></li>
-										<li><a href="">Comment</a></li>
-										<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
-									</ul>
-								</div>
-								<div class="pull-right">
-									<ul class="nav nav-pills">
-										<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
-										<li><a><i class="fa fa-comment"></i> 8</a></li>
-										<li><a><i class="fa fa-share"></i> 0</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="comments">
-								<% for i in 1..6 %>
+						<div class="post">
+							<div class="head">
 								<div class="media">
 								  <a class="media-left" href="#">
-									<%= image_tag 'sample-thumbs/4.jpg', :class => 'img-circle', :width => '30' %>
+									<%= image_tag 'sample-thumbs/2.jpg', :class => 'img-rounded', :width => '50' %>
 								  </a>
 								  <div class="media-body">
-									<h5><a href=""><%= lorem.first_name %> <%= lorem.last_name %></a> <small>3 minutes ago</small></h5>
-								    <p><%= lorem.sentence %></p>
+								    <h4 class="media-heading"><a href=""><%= lorem.first_name %> <%= lorem.last_name %></a></h4>
+								    <small>3 minutes ago</small>
 								  </div>
 								</div>
-								<% end %>
-								<form>
-									<div class="media">
-							  			<a class="media-left" href="#">
-										  <%= image_tag 'sample-thumbs/4.jpg', :class => 'img-circle', :width => '30' %>
-							  			</a>
-										<div class="media-body">
-											<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
-											<input type="submit" class="btn btn-primary" value="Post comment" />
-											<a href="" class="btn btn-default">Cancel</a>
-										</div>
-									</div>
-								</form>
 							</div>
-						</div> <!-- foot -->
+							<div class="body">
+								<p><%= lorem.paragraph %></p>
+							</div>
+							<div class="foot">
+								<div class="actions clearfix">
+									<div class="pull-left">
+										<ul class="nav nav-pills">
+											<li><a href="">Applaud</a></li>
+											<li><a href="">Comment</a></li>
+											<li><a class="share-this-post" data-toggle="modal" data-target=".sharePostForm" href="#">Share</a></li>
+										</ul>
+									</div>
+									<div class="pull-right">
+										<ul class="nav nav-pills">
+											<li><a><i class="fa fa-thumbs-up"></i> 24</a></li>
+											<li><a><i class="fa fa-comment"></i> 8</a></li>
+											<li><a><i class="fa fa-share"></i> 0</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="comments">
+									<% for i in 1..6 %>
+									<div class="media">
+									  <a class="media-left" href="#">
+										<%= image_tag 'sample-thumbs/4.jpg', :class => 'img-circle', :width => '30' %>
+									  </a>
+									  <div class="media-body">
+										<h5><a href=""><%= lorem.first_name %> <%= lorem.last_name %></a> <small>3 minutes ago</small></h5>
+									    <p><%= lorem.sentence %></p>
+									  </div>
+									</div>
+									<% end %>
+									<form>
+										<div class="media">
+								  			<a class="media-left" href="#">
+											  <%= image_tag 'sample-thumbs/4.jpg', :class => 'img-circle', :width => '30' %>
+								  			</a>
+											<div class="media-body">
+												<textarea class="form-control" placeholder="Add a comment..." rows="1" cols="100"></textarea>
+												<input type="submit" class="btn btn-primary" value="Post comment" />
+												<a href="" class="btn btn-default">Cancel</a>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div> <!-- foot -->
+						</div>
 					</div> <!-- col-md-3 -->
 				</div>
 			</div>

@@ -10,12 +10,14 @@
     <title><%= current_page.data.title || "Thankyouspot" %></title>
     
     <%= stylesheet_link_tag "main" %>
-    <%= javascript_include_tag  "vendor/jquery", "vendor/bootstrap", "vendor/jquery.photoset-grid", "design" %>
+    
 	<%= favicon_tag 'images/favicon.ico' %>
   </head>
   <body class="<%= page_classes %>">
 	<%= partial "partials/user-navigation" %>
     <%= yield %>
 	<%= partial "partials/user-footer" %>
+	
+	<%= javascript_include_tag  "vendor/jquery", "vendor/bootstrap", "vendor/jquery.photoset-grid", "design" %>
   </body>
 </html>
