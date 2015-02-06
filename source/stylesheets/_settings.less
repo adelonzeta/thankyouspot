@@ -1,12 +1,27 @@
 .settings {
 	padding-top: 50px;
-	section {
-		padding: 60px 0;
-	}
-	h1 {
-		margin: 0 0 40px;
+	.head {
+		background: #fff;
+		padding: 60px 0 0;
+		h1 {
+			margin: 0 0 60px;
+		}
+		.nav {
+			li {
+				a {
+					outline: none;
+				}
+				&.active {
+					a {
+						background: #EFEEEC;
+						border-bottom: solid 1px #EFEEEC;
+					}
+				}
+			}
+		}
 	}
 	.account-settings {
+		padding: 60px 0;
 		.form-group {
 			padding: 20px 0;
 			margin: 0;
@@ -15,5 +30,14 @@
 				text-align: left;
 			}
 		}
+		.thumbnail {
+			margin-bottom: 10px;
+		}
+		.media {
+			.thumbnail {
+				margin-bottom: 0;
+			}
+		}
 	}
+	
 }
