@@ -16,6 +16,7 @@
   </head>
   <body class="profile">
 	<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+	<div class="nav-overlay"></div>
   <div class="container-fluid">
     <div class="navbar-header">
       <button data-target="#navigation-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
@@ -43,6 +44,7 @@
 		    </a>
 		    <ul aria-labelledby="nav-notifications" role="menu" class="dropdown-menu">
 			  <li class="dropdown-header hidden-xs">Notifications</li>
+			  <li>Nothing's going on right now.</li>
 		      <li class="unread">
 				  <a href="">
 					<div class="media">
@@ -168,16 +170,47 @@
     </div>
   </div>
 </nav>
-    <header class="has-cover"> <!-- remove class if no cover photo -->
-	<div class="header-photo" style="background: url(images/sample-thumbs/profile-header3.jpg) no-repeat center / cover #fff;"></div> <!-- Remove this if no cover photo -->
+    <div class="profile-editing-overlay"></div>
+<header class="has-cover"> <!-- remove class if no cover photo -->
+	<div class="editing-cover-overlay"></div>
+	<div class="header-photo" style="background: url(images/sample-thumbs/profile-header3.jpg) no-repeat center / cover #fff;"></div> <!-- Remove this if no cover photo -->	
+	<div class="dropdown editing-cover-button">
+		<a href="" data-toggle="dropdown" class="button"><i class="fa fa-photo"></i> Change Cover</a>
+		<ul class="dropdown-menu">
+			<li><a href="">Upload photo</a></li>
+			<li><a href="">Remove</a></li>
+		</ul>
+		<input type="file" class="hidden"><!-- Call this when uploading photo -->
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<img class="img-circle" width="180" src="images/sample-thumbs/2.jpg" />
-				<h1>Ian Delgado</h1>
-				<p class="lead"> I love nature. I love cats and dogs. I love photography. I love music. I respect life and other person's point of view. I don't judge anyone.</p>
-				<a href="" class="btn btn-success btn-lg" data-toggle="modal" data-target="#sayThanksForm"><i class="fa fa-pencil"></i> Say Thanks</a>
-				<a href="" class="btn btn-default btn-lg"><i class="fa fa-plus-circle"></i> Follow</a>
+				<div class="profile-photo-container">
+					<div class="dropdown editing-photo">
+						<a href="" data-toggle="dropdown" class="button"><i class="fa fa-camera"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href="">Upload photo</a></li>
+							<li><a href="">Remove</a></li>
+						</ul>
+						<input type="file" class="hidden"><!-- Call this when uploading photo -->
+					</div>
+					<img class="img-circle profile-photo" width="180" src="images/sample-thumbs/4.jpg" />
+				</div>
+				<div class="saved-view">
+					<h1>Ian Delgado</h1>
+					<p class="lead"> I love nature. I love cats and dogs. I love photography. I love music. I respect life and other person's point of view. I don't judge anyone.</p>
+					<!--
+					<a href="" class="btn btn-success btn-lg" data-toggle="modal" data-target="#sayThanksForm"><i class="fa fa-pencil"></i> Say Thanks</a>
+					<a href="" class="btn btn-default btn-lg"><i class="fa fa-plus-circle"></i> Follow</a>
+					-->
+					<a href="javascript:void(0)" class="btn btn-default btn-lg edit-profile"><i class="fa fa-pencil"></i> Edit Profile</a>
+				</div>
+				<div class="editing-view">
+					<input type="text" value="Ian Delgado" class="form-control editing-name" placeholder="Your Name">
+					<textarea class="form-control editing-bio" rows="3" cols="40" placeholder="Your Bio">I love nature. I love cats and dogs. I love photography. I love music. I respect life and other person's point of view. I don't judge anyone.</textarea>
+					<a href="javascript:void(0)" class="btn btn-primary btn-lg">Save Changes</a>
+					<a href="javascript:void(0)" class="btn btn-default btn-lg cancel-editing">Cancel</a>
+				</div>
 				<ul class="nav nav-pills nav-justified">
 					<li class="active">
 						<a role="tab" data-toggle="tab" href="#user-recognitions">
@@ -212,6 +245,9 @@
 	<div class="container">
 		<div class="tab-content">
 			<div role="tabpanel" class="tab-pane active" id="user-recognitions">
+				<!-- Feel free to change the text.
+				<p class="empty-feed">Nothing to display here. <a href="">Share something?</a></p>
+				-->
 				<div class="row post-feed">
 					<div class="col-md-6">
 						<div class="post recognition">
@@ -221,14 +257,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Brayden McNeill</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <h4 class="media-heading"><a href="">Rolando McAllister</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Minus sequi alias debitis eaque voluptatem laboriosam iusto rerum quasi sunt et. enim pariatur aspernatur aut consequatur quos quibusdam ratione quis optio. illo reprehenderit omnis saepe sint aut</p>
+		<p>Velit sapiente explicabo aliquid eum et reprehenderit. ex perferendis in veniam quo optio vitae voluptas eaque hic consequatur. asperiores commodi ex quia est molestiae deserunt reiciendis aliquam quas quae</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -262,8 +298,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Colm Locklear</a> <small>3 minutes ago</small></h5>
-			    <p>Ducimus rem rerum aspernatur molestias</p>
+				<h5><a href="">Kenneth Davidson</a> <small>3 minutes ago</small></h5>
+			    <p>Molestiae molestiae laudantium qui quia rem omnis praesentium vero recusandae officiis excepturi</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -271,8 +307,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Margarita Lawrence</a> <small>3 minutes ago</small></h5>
-			    <p>Ut possimus voluptatum beatae suscipit sunt iusto mollitia</p>
+				<h5><a href="">Billy Cross</a> <small>3 minutes ago</small></h5>
+			    <p>Dignissimos cum officia itaque quis delectus aut eius quos ducimus</p>
 			  </div>
 			</div>
 			<form>
@@ -297,14 +333,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Daryl Tilley</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <h4 class="media-heading"><a href="">Denis Hanna</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Esse aperiam officiis quia ab quam et voluptatibus aut debitis nostrum autem. voluptate occaecati quo velit. harum corporis incidunt molestiae. ut iste doloribus possimus quam autem. dolores fugit qui voluptas dolores impedit ut animi aut labore. ut ut id maiores odit et ut voluptatem totam dolorem iusto modi quis</p>
+		<p>Sed occaecati qui ea veniam atque in consequatur. aut ut consequuntur rerum aut est asperiores molestias quibusdam tempore commodi nostrum. non suscipit aut molestias deserunt animi quo. necessitatibus sint dolorum ex natus est quam. unde eum non et vel et libero blanditiis veniam quo id asperiores unde. eos corporis veritatis est rerum animi quaerat dicta ducimus quia dolores et non assumenda in</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -338,8 +374,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Giselle Adkins</a> <small>3 minutes ago</small></h5>
-			    <p>Commodi quis autem velit odio est dolor cumque repellendus rerum dolorum iste vitae ea</p>
+				<h5><a href="">Virgil O'Donnell</a> <small>3 minutes ago</small></h5>
+			    <p>Voluptatem aut ducimus sit optio ut et quo neque facilis est</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -347,8 +383,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Vance Sinclair</a> <small>3 minutes ago</small></h5>
-			    <p>Fuga provident sed cupiditate voluptas est qui ut beatae</p>
+				<h5><a href="">Ewan Watson</a> <small>3 minutes ago</small></h5>
+			    <p>Odit molestiae et quam accusamus in optio facilis voluptatem sequi</p>
 			  </div>
 			</div>
 			<form>
@@ -373,14 +409,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Alvin Grant</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <h4 class="media-heading"><a href="">Dalton Song</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Quos exercitationem nam aut voluptatem culpa aut. a itaque delectus aut cum eos ipsum exercitationem molestiae perspiciatis. veritatis pariatur consequatur qui eos et id. nesciunt autem totam aut laborum vero dolores enim vero voluptates voluptas et dolor. laborum id ea dolor consequatur</p>
+		<p>Alias rem rem magnam at quo atque quasi nisi quia aut voluptatem aut. illum numquam quo architecto error nam. aut voluptas illum nihil voluptatem dolor aut ut quo qui dicta nobis consequuntur ullam. recusandae eos consequuntur ex tempora rerum suscipit id voluptates delectus non inventore perspiciatis. est omnis laudantium nulla placeat ducimus dolore repellat ex est doloribus. qui animi voluptas provident ipsa sint nostrum et magnam laudantium</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -414,8 +450,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Rafael Palmer</a> <small>3 minutes ago</small></h5>
-			    <p>Autem sequi omnis saepe aut culpa facilis officiis et sunt et</p>
+				<h5><a href="">Pete Chen</a> <small>3 minutes ago</small></h5>
+			    <p>Ex qui magni sit sed dolorem eius consequatur temporibus repellat porro voluptatum consequatur id sit</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -423,8 +459,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Alfredo Davidson</a> <small>3 minutes ago</small></h5>
-			    <p>Laborum quidem rerum ex harum et ipsam</p>
+				<h5><a href="">Courtney Garrett</a> <small>3 minutes ago</small></h5>
+			    <p>Ea sed porro sed iure dolor impedit culpa qui voluptatem ut beatae corrupti</p>
 			  </div>
 			</div>
 			<form>
@@ -449,14 +485,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Virgil Stout</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <h4 class="media-heading"><a href="">Wendell Vick</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Consectetur enim architecto quis non modi quaerat numquam. adipisci cum ratione possimus harum qui nemo ab officiis ut quae doloribus ea. impedit nostrum magni minima quam illo blanditiis dolorum ut assumenda laborum. et aut reprehenderit aperiam voluptas magni cum quia corrupti</p>
+		<p>Dolores voluptatum ipsam magni est eligendi. ratione enim aliquid eum modi voluptas esse similique temporibus mollitia quod deserunt sint. quia occaecati et iste consequatur quis provident assumenda quia in perferendis eos possimus vel. corporis blanditiis error sed ipsam qui reiciendis velit sapiente aut. a rerum corporis quia officiis accusamus praesentium mollitia labore necessitatibus temporibus sit ducimus. neque est nostrum ut iure molestias ipsum sunt architecto placeat ad id</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -490,8 +526,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Leslie Hunt</a> <small>3 minutes ago</small></h5>
-			    <p>Ut veniam est molestiae blanditiis vel consequatur est non quae</p>
+				<h5><a href="">Darius Sumner</a> <small>3 minutes ago</small></h5>
+			    <p>Consequuntur asperiores voluptas neque qui veniam eveniet laboriosam alias voluptatibus repellendus rerum</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -499,8 +535,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Rogelio Petersen</a> <small>3 minutes ago</small></h5>
-			    <p>Placeat et tempore eligendi pariatur quae quia dolores officiis tempore</p>
+				<h5><a href="">Zoe O'Brien</a> <small>3 minutes ago</small></h5>
+			    <p>Ut incidunt temporibus perferendis reiciendis quaerat et</p>
 			  </div>
 			</div>
 			<form>
@@ -525,14 +561,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Cindy Lloyd</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <h4 class="media-heading"><a href="">Kieran Clapp</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Sit error soluta voluptatem placeat quia ut unde. vero est magni soluta qui dolorem aut iusto repellat et necessitatibus nobis veniam ipsum totam. sit tempora ut culpa aliquid velit consequatur quaerat voluptatum quia quae cumque ut qui</p>
+		<p>Autem fuga delectus quo quis nostrum asperiores inventore earum fugiat et enim aut. ipsum animi nisi inventore possimus inventore est reiciendis consequuntur repellendus sunt nihil sit dolorum. molestiae dolores officia qui nostrum quaerat. voluptatem neque velit ipsa ut non alias dolores. quasi unde aut velit sint atque atque dolore sequi. dolorum vero non pariatur architecto aliquam itaque mollitia assumenda excepturi dolorem cumque</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -566,8 +602,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Sienna Justice</a> <small>3 minutes ago</small></h5>
-			    <p>Aliquid corrupti nobis dolores veniam alias quis maiores doloribus earum dicta dolores sint</p>
+				<h5><a href="">Michelle Moss</a> <small>3 minutes ago</small></h5>
+			    <p>Id consectetur expedita saepe alias est ad</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -575,8 +611,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Kailey Harvey</a> <small>3 minutes ago</small></h5>
-			    <p>Neque voluptas quisquam est ipsa non aliquam</p>
+				<h5><a href="">Alvin Brady</a> <small>3 minutes ago</small></h5>
+			    <p>Rerum non impedit est fugit vel porro et aut voluptatem adipisci illum itaque repellat amet</p>
 			  </div>
 			</div>
 			<form>
@@ -603,14 +639,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Kyla Bowling</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <h4 class="media-heading"><a href="">Reid Watts</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Consequuntur odit expedita quo similique consectetur sequi quidem ut quaerat harum deserunt incidunt sed. eius aut quia illum sequi ullam consequatur eveniet. ut fugiat alias et vel iusto autem deleniti iste magnam eligendi suscipit. minus deleniti iure voluptas nobis mollitia aut ex</p>
+		<p>Quia qui est placeat molestiae adipisci ducimus aut laborum omnis. eos ratione quae quo impedit dolores dolorum nulla corrupti. occaecati vel temporibus aliquid sequi et. aliquid numquam ipsam est et consectetur iste maiores pariatur. in aliquam perspiciatis inventore modi delectus ut provident quo et. at ut facilis porro similique veniam in minima autem ut</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -644,8 +680,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Skyler Rosenthal</a> <small>3 minutes ago</small></h5>
-			    <p>Quam ut rerum voluptatibus laborum nobis amet recusandae voluptatibus</p>
+				<h5><a href="">Xena Hamilton</a> <small>3 minutes ago</small></h5>
+			    <p>Consequatur et hic aut velit aut sunt molestiae tempora officiis</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -653,8 +689,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Abigail Rose</a> <small>3 minutes ago</small></h5>
-			    <p>Dolorum ut aut rerum cum quisquam voluptas corporis minima omnis odio</p>
+				<h5><a href="">Marsha Christensen</a> <small>3 minutes ago</small></h5>
+			    <p>Minima eaque veniam dolorem repellendus illo rem et fugit</p>
 			  </div>
 			</div>
 			<form>
@@ -679,14 +715,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Elaine Heath</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <h4 class="media-heading"><a href="">Carmen Robertson</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Eos aut et eligendi. ratione officia autem omnis molestiae inventore incidunt voluptates aut possimus provident numquam. asperiores et quo non fugit illo. beatae fugit minus sed est dolore voluptatum est molestias recusandae repellat vero itaque non</p>
+		<p>Labore dignissimos id temporibus ab voluptas aut. quo ea deleniti quisquam omnis asperiores impedit sit. rem et id non vel ipsum ipsam non provident esse et. cupiditate possimus voluptas eligendi tempora optio perferendis ratione facilis amet nostrum aliquam debitis. adipisci a minus quia ut facilis. qui ipsum cumque tenetur quia quisquam porro sequi aut aut vel at et cumque. quos architecto facilis molestias repellendus sit consequatur quibusdam aut qui similique molestiae ipsum dolores</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -720,8 +756,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Perla Branch</a> <small>3 minutes ago</small></h5>
-			    <p>Repudiandae explicabo beatae reiciendis optio illo incidunt error dignissimos omnis</p>
+				<h5><a href="">Harrison Cowan</a> <small>3 minutes ago</small></h5>
+			    <p>Velit molestias odit aut in quibusdam voluptates consequatur</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -729,8 +765,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Kelly Siegel</a> <small>3 minutes ago</small></h5>
-			    <p>Eaque voluptatem facilis repellat quod</p>
+				<h5><a href="">Teddy Welch</a> <small>3 minutes ago</small></h5>
+			    <p>Reiciendis repudiandae tempore dolore voluptas quis occaecati</p>
 			  </div>
 			</div>
 			<form>
@@ -755,14 +791,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Monty Glover</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <h4 class="media-heading"><a href="">Tammie Walsh</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Et odit et esse eum. at voluptatem commodi autem saepe eum. voluptatibus distinctio eum suscipit sit hic repellendus blanditiis excepturi. omnis earum sint temporibus aut possimus velit architecto minima molestiae esse quia id</p>
+		<p>Eos rerum et fuga necessitatibus temporibus qui. aut non officiis impedit tempore at nostrum harum non. qui laboriosam quam quasi nobis corrupti. voluptatem eum vel assumenda enim quo et et earum et. sint totam ratione aut pariatur omnis aut voluptates beatae omnis tenetur est. deleniti consectetur voluptate ut voluptatem rem molestiae enim. deserunt sint voluptas quia quis distinctio qui provident et voluptatem sit exercitationem et</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -796,8 +832,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">inley Jennings</a> <small>3 minutes ago</small></h5>
-			    <p>Dolorem aliquid nobis deserunt rem ut dolor molestiae mollitia possimus modi fuga quam</p>
+				<h5><a href="">Allen Ross</a> <small>3 minutes ago</small></h5>
+			    <p>Reiciendis tempore dolor ut</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -805,8 +841,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Darius Holloway</a> <small>3 minutes ago</small></h5>
-			    <p>Ipsam et et qui est vero qui necessitatibus et molestias ratione reprehenderit</p>
+				<h5><a href="">Eli Black</a> <small>3 minutes ago</small></h5>
+			    <p>Id et rerum et ducimus deleniti possimus ad cumque sunt</p>
 			  </div>
 			</div>
 			<form>
@@ -831,14 +867,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Geraldine Nichols</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <h4 class="media-heading"><a href="">Alfredo McKenna</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Magni et enim qui explicabo nulla illo odio eos vel sunt autem et alias. similique non non minima in. nam id id omnis aliquam recusandae quasi. dignissimos qui odit quo aut omnis et cupiditate asperiores rerum praesentium debitis minus vitae. minima iusto libero tenetur. voluptas temporibus praesentium cupiditate vel aliquid aut atque vitae consectetur doloribus</p>
+		<p>Sunt soluta quia ut ab consequatur quis rem accusamus iste in quidem dolor molestias. occaecati reprehenderit recusandae delectus animi vel magnam quis voluptatibus ut odio itaque. sint amet sed animi temporibus iure at autem maiores. voluptatem id autem sequi. ut dolores labore possimus libero fugit. sed suscipit occaecati voluptas illo itaque voluptatem voluptas sed deleniti</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -872,8 +908,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Ciaran Johnston</a> <small>3 minutes ago</small></h5>
-			    <p>Nulla voluptatem recusandae ab nisi ut facilis aspernatur perferendis aut</p>
+				<h5><a href="">Ciara Parks</a> <small>3 minutes ago</small></h5>
+			    <p>Qui nisi est sint minus accusamus mollitia et et</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -881,8 +917,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Courtney Chen</a> <small>3 minutes ago</small></h5>
-			    <p>At nesciunt libero quam et</p>
+				<h5><a href="">Alyson Powers</a> <small>3 minutes ago</small></h5>
+			    <p>Sequi qui neque omnis ut voluptatem cupiditate vero sint</p>
 			  </div>
 			</div>
 			<form>
@@ -907,14 +943,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/3.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Brendon Rich</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
+		    <h4 class="media-heading"><a href="">Rogelio Watson</a> <span>is thankful to</span> <a href="">Ian Delgado</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Dolorem qui fuga nostrum in. blanditiis nulla quis sit dolores officiis est culpa consequatur enim sit est. qui veniam minus blanditiis odit. dolores amet perspiciatis ea commodi dolorem unde doloremque dignissimos ullam voluptatibus. voluptatem sint totam alias. ab dignissimos sit id qui est architecto harum voluptates officiis. ex nulla sit repudiandae ipsum suscipit ad corrupti qui explicabo minus vitae exercitationem at</p>
+		<p>Repudiandae laboriosam nihil alias accusamus qui similique. fugiat voluptatem dolor veritatis possimus et. assumenda ducimus ducimus quod quae aspernatur sint nobis corporis quia ipsa maiores et</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -948,8 +984,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Carmen Griffin</a> <small>3 minutes ago</small></h5>
-			    <p>Aut nulla facilis rem ducimus reiciendis aut enim sit rerum cum</p>
+				<h5><a href="">Justice Holloway</a> <small>3 minutes ago</small></h5>
+			    <p>Velit consequuntur corporis pariatur consequatur possimus et ex</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -957,8 +993,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Elise Chen</a> <small>3 minutes ago</small></h5>
-			    <p>Omnis maxime quidem minima commodi ullam</p>
+				<h5><a href="">Nia Rose</a> <small>3 minutes ago</small></h5>
+			    <p>Adipisci magni tenetur architecto rerum vel sapiente quod blanditiis delectus voluptatem soluta</p>
 			  </div>
 			</div>
 			<form>
@@ -990,14 +1026,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">inley Clapp</a></h4>
+		    <h4 class="media-heading"><a href="">Colton Tilley</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Et occaecati repudiandae omnis dolores. veniam et dolor at porro. eum impedit doloremque sit molestiae voluptatem. natus totam corrupti iure sit nam id corporis excepturi aspernatur est labore. dolores reprehenderit ea deserunt quisquam temporibus accusantium sed eum reprehenderit aut incidunt quisquam</p>
+		<p>In maxime architecto sit et beatae modi rerum illo velit voluptatibus eaque dignissimos nobis fugiat. ut repellendus fugit eius dolores enim temporibus et iste. et ullam molestiae facere sit. commodi est quia sint ut voluptate magnam dolorum eum odio unde consequatur facere quibusdam quia. est rerum aspernatur vitae doloremque fugit omnis voluptatem sed earum qui adipisci impedit nihil</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -1031,8 +1067,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Nadia Robertson</a> <small>3 minutes ago</small></h5>
-			    <p>Eaque veritatis incidunt recusandae reprehenderit blanditiis qui</p>
+				<h5><a href="">Skyler Heath</a> <small>3 minutes ago</small></h5>
+			    <p>Et ad quo consectetur voluptatem temporibus impedit illo aliquam at similique ut officiis sed</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -1040,8 +1076,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">George Norman</a> <small>3 minutes ago</small></h5>
-			    <p>Rerum tenetur et facilis libero odio enim culpa eos distinctio</p>
+				<h5><a href="">Deana Norman</a> <small>3 minutes ago</small></h5>
+			    <p>Perferendis cupiditate in eum quam provident cupiditate vero</p>
 			  </div>
 			</div>
 			<form>
@@ -1066,14 +1102,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Paola Christensen</a></h4>
+		    <h4 class="media-heading"><a href="">Pete Singer</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Architecto dolores rerum aut. suscipit voluptate maiores sint esse optio sed dolorem necessitatibus ut odio temporibus odio aliquam. molestiae ut ad sequi molestiae dicta voluptatem. enim qui odio unde perspiciatis aut</p>
+		<p>Tempora autem dolor et labore recusandae in porro corrupti. odit adipisci aut quidem omnis quibusdam tempore velit aut sunt impedit laboriosam nulla fugit. distinctio aspernatur in dignissimos voluptatem sapiente neque amet at enim alias facere exercitationem illum. consequatur error nobis explicabo minima autem perferendis magnam doloribus aut est qui non eligendi repellat. impedit architecto assumenda ea sunt. sit dolorem consequuntur rerum consequuntur fuga voluptas. inventore nostrum perspiciatis quia esse consequuntur dolores minus fugit illo reprehenderit et</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -1107,8 +1143,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Sheryl Carlton</a> <small>3 minutes ago</small></h5>
-			    <p>Accusamus voluptatem dolor sit</p>
+				<h5><a href="">Kyla O'Brien</a> <small>3 minutes ago</small></h5>
+			    <p>Natus architecto saepe illum vitae tenetur neque sequi aliquam qui</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -1116,8 +1152,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Alexa Bowman</a> <small>3 minutes ago</small></h5>
-			    <p>Exercitationem temporibus sed magni sapiente sed cupiditate ipsa magni eum non</p>
+				<h5><a href="">Earl Mangum</a> <small>3 minutes ago</small></h5>
+			    <p>Ab tempore non officiis sapiente dicta veritatis consequatur error</p>
 			  </div>
 			</div>
 			<form>
@@ -1142,14 +1178,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Isabelle Black</a></h4>
+		    <h4 class="media-heading"><a href="">Hamish Palmer</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Et perferendis ipsum quis deleniti unde fugiat et velit et. minima molestiae natus praesentium. hic quaerat quisquam non in quasi dolor rerum sunt perspiciatis aliquam voluptas numquam mollitia iusto. ut ea iste ex enim est id dolor aperiam similique non maiores. dolores occaecati maiores veniam asperiores voluptas eos totam exercitationem dolores qui et aut eius. omnis consequatur perspiciatis et aliquam voluptatem sed omnis eum temporibus</p>
+		<p>Ut non suscipit porro ut et perspiciatis quos eius. sit numquam quis quidem eaque in placeat perferendis nesciunt fuga eum ad vero et. adipisci aliquid quisquam vero minima cumque et sed. provident recusandae mollitia corporis sed laborum fugiat unde perspiciatis autem maiores error nobis. rem voluptatem eum et consequatur nesciunt officiis adipisci eveniet ea et blanditiis vero. quia aut non accusantium</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -1183,8 +1219,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Manuel Hall</a> <small>3 minutes ago</small></h5>
-			    <p>Molestiae nihil dolore quo aut sint omnis rem</p>
+				<h5><a href="">Dwayne Terrell</a> <small>3 minutes ago</small></h5>
+			    <p>Ipsa nobis sed necessitatibus aliquam</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -1192,8 +1228,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Hamish Pittman</a> <small>3 minutes ago</small></h5>
-			    <p>Aliquid magnam dolores nam illo ducimus et pariatur ea quod magnam sit</p>
+				<h5><a href="">Isabel Watson</a> <small>3 minutes ago</small></h5>
+			    <p>Autem id cum ut hic provident delectus</p>
 			  </div>
 			</div>
 			<form>
@@ -1218,14 +1254,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Bart Brady</a></h4>
+		    <h4 class="media-heading"><a href="">Johnnie Boswell</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Optio aspernatur dolore omnis corporis aut ullam est natus quae maiores. ad libero architecto pariatur illum id cumque consectetur quisquam consectetur. quo voluptatem distinctio vel reiciendis laudantium repudiandae dolor dolorum nisi. distinctio labore at neque labore porro eum sapiente ab incidunt debitis dolores. sed rem sed perferendis reprehenderit dolor unde id praesentium qui asperiores et. eos similique odio nisi ipsum incidunt</p>
+		<p>Aut laborum deleniti molestias aut optio et sed quod quisquam sit nam soluta sed ut. et non est non. et amet et provident</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -1259,8 +1295,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Sydney Sparks</a> <small>3 minutes ago</small></h5>
-			    <p>Eius molestias velit sit recusandae assumenda corrupti consequatur qui ipsa maxime dolor impedit excepturi</p>
+				<h5><a href="">Emma Jennings</a> <small>3 minutes ago</small></h5>
+			    <p>Sed enim iure praesentium eveniet adipisci aut enim omnis vitae ex nostrum voluptate ratione voluptatem</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -1268,8 +1304,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Allyson O'Donnell</a> <small>3 minutes ago</small></h5>
-			    <p>Ut consectetur qui est accusamus fuga quis eum et et labore architecto deserunt earum non</p>
+				<h5><a href="">Manuel Pearson</a> <small>3 minutes ago</small></h5>
+			    <p>Aut quia quia ut dolore</p>
 			  </div>
 			</div>
 			<form>
@@ -1294,14 +1330,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Elaine Barr</a></h4>
+		    <h4 class="media-heading"><a href="">Beau Gallagher</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Et iusto neque maiores sit non dolores officiis quaerat odio nemo optio tempora blanditiis aspernatur. qui ipsum sint quo officiis quas omnis accusamus sed corporis molestiae dolorem culpa velit. fugit consequatur quo et aliquam aspernatur voluptas. atque iure explicabo cum nam. quod et aut dolorem facere voluptate illum ea corrupti</p>
+		<p>Sequi architecto natus dolorum consequatur ipsam placeat voluptatibus atque nulla eos sapiente provident labore. quibusdam odio nam eos amet inventore et sed natus laudantium ab et nesciunt asperiores. accusamus ut expedita et sequi odit omnis dolores sit eos. debitis molestiae nulla qui placeat. quod fugiat voluptatem nam est optio sequi delectus accusamus est. qui qui sed quasi quam reiciendis nam. ab aperiam odio labore quidem dolorem quibusdam placeat quo natus omnis est</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -1335,8 +1371,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Elaine Proctor</a> <small>3 minutes ago</small></h5>
-			    <p>Ratione est et aspernatur voluptas vel quam facere eveniet repellendus repudiandae qui esse exercitationem culpa</p>
+				<h5><a href="">Guy Sykes</a> <small>3 minutes ago</small></h5>
+			    <p>Placeat commodi nostrum sunt est</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -1344,8 +1380,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Kerry McNeill</a> <small>3 minutes ago</small></h5>
-			    <p>Ducimus itaque doloremque dolore ut adipisci laborum modi aliquam</p>
+				<h5><a href="">Moses Woods</a> <small>3 minutes ago</small></h5>
+			    <p>Perferendis ducimus perspiciatis ut repellendus</p>
 			  </div>
 			</div>
 			<form>
@@ -1372,14 +1408,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Vance Rich</a></h4>
+		    <h4 class="media-heading"><a href="">Denis Dougherty</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Quasi sequi aut dolorem ut vero nulla laborum unde facilis molestiae. architecto voluptatum a totam nihil ut cumque harum ea aperiam. repellendus non laboriosam occaecati maiores nesciunt et. et repellendus quam id ea voluptatem. deleniti voluptatem qui qui quod nesciunt asperiores. illo sit et officia ex cupiditate et quisquam vel velit repellendus quia. veritatis necessitatibus et rerum error illo minus dolor hic inventore culpa qui ut itaque</p>
+		<p>Odio placeat sunt dolores. tenetur ea ut officiis. doloremque enim veniam tempore et quaerat voluptatem expedita consectetur suscipit debitis est laborum enim. consequatur at ex laudantium repellendus. hic est voluptas ullam ea facere quia et tenetur dignissimos nulla excepturi occaecati. rerum illum omnis assumenda ducimus mollitia voluptatem libero est. a modi est repellat nulla aut ut</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -1413,8 +1449,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Ty Rich</a> <small>3 minutes ago</small></h5>
-			    <p>Delectus deleniti eligendi rerum eius at aut laudantium</p>
+				<h5><a href="">Nadia Rollins</a> <small>3 minutes ago</small></h5>
+			    <p>Placeat qui suscipit exercitationem tenetur libero et quia doloribus optio cum</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -1422,8 +1458,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Yehudi Graham</a> <small>3 minutes ago</small></h5>
-			    <p>Modi voluptatibus sed ut</p>
+				<h5><a href="">Lynette Atkins</a> <small>3 minutes ago</small></h5>
+			    <p>Tempore pariatur fuga assumenda aliquam vero qui quis quis dolorem doloribus</p>
 			  </div>
 			</div>
 			<form>
@@ -1448,14 +1484,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Eliza Jennings</a></h4>
+		    <h4 class="media-heading"><a href="">Annika Perkins</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Odit et a est at eaque doloremque ipsum necessitatibus voluptate eum. est at dolorem sapiente sit quas repudiandae quia et cumque minima. unde consectetur corrupti praesentium tenetur a consequuntur neque aliquid adipisci qui nemo alias enim. illum qui molestias provident molestias rerum id blanditiis ut dicta neque vel. distinctio ad quas ipsa nostrum quaerat quas. distinctio quasi et ut blanditiis dolor corrupti deserunt quia velit totam dolor voluptatem. alias est sapiente error dolor porro iure facere vero</p>
+		<p>Est doloremque eius aut ut sit occaecati rerum et pariatur ea distinctio nemo laboriosam et. eos exercitationem ea ipsa dolorem amet libero autem harum beatae est voluptas aperiam. repellendus modi mollitia iure est et ipsam consequatur dolores expedita impedit</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -1489,8 +1525,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Cindy Coleman</a> <small>3 minutes ago</small></h5>
-			    <p>Error voluptatem doloremque id</p>
+				<h5><a href="">Carmen Burch</a> <small>3 minutes ago</small></h5>
+			    <p>Commodi et aspernatur atque eos vero soluta sit accusantium nihil voluptas</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -1498,8 +1534,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Kelvin Vick</a> <small>3 minutes ago</small></h5>
-			    <p>Iusto repellat voluptates nisi beatae deleniti quis dolorem perferendis repellendus dolores ullam</p>
+				<h5><a href="">Peggy Sharpe</a> <small>3 minutes ago</small></h5>
+			    <p>Fugiat consectetur dolorum beatae unde praesentium et id fugit et</p>
 			  </div>
 			</div>
 			<form>
@@ -1524,14 +1560,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Alberto Stout</a></h4>
+		    <h4 class="media-heading"><a href="">Emely Locklear</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Exercitationem ut reprehenderit eos itaque totam aut ut dolorum architecto ut corrupti libero. dolore cupiditate eius et aut ut molestias porro vel. voluptatem occaecati nisi laboriosam ut atque et vero in. doloribus odio quam deserunt voluptatem illum</p>
+		<p>Velit sed aut perspiciatis harum quis dolorem et blanditiis fugit velit aut ipsum suscipit molestias. et in nihil rem impedit amet accusantium quia qui aliquam facilis ipsam consequatur necessitatibus libero. eos porro repellendus quia iusto. saepe vero maxime laboriosam praesentium. nihil voluptas facilis sunt eius et aut qui non fuga fuga sint iste incidunt ipsa. veritatis quo praesentium laborum quidem. nulla et dolore est aspernatur totam tenetur eligendi similique est</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -1565,8 +1601,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Lori McNamara</a> <small>3 minutes ago</small></h5>
-			    <p>Recusandae necessitatibus temporibus beatae dolorum nihil dolorem dolor nesciunt nihil beatae</p>
+				<h5><a href="">Harrison McLean</a> <small>3 minutes ago</small></h5>
+			    <p>Molestiae dolor vitae omnis ipsam libero</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -1574,8 +1610,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Denis Graham</a> <small>3 minutes ago</small></h5>
-			    <p>Magnam et quod vel temporibus voluptatem in sapiente</p>
+				<h5><a href="">Eric Bowman</a> <small>3 minutes ago</small></h5>
+			    <p>Commodi modi ea ut</p>
 			  </div>
 			</div>
 			<form>
@@ -1600,14 +1636,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Lucinda Rollins</a></h4>
+		    <h4 class="media-heading"><a href="">Guy MacDonald</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Necessitatibus soluta quasi nihil sed reprehenderit quod aliquam laudantium. velit consequatur aspernatur ex in ab ducimus sequi eveniet omnis. placeat ipsa qui fuga odio laborum ut ut ea possimus ad quaerat consequatur et. non inventore est nobis nihil voluptas qui cumque occaecati. repellendus quia explicabo dolores illum rem</p>
+		<p>Dolores enim et est itaque aut qui sed molestiae ipsam. earum non fuga sed et quo adipisci quia. quas accusantium velit ea placeat delectus nulla quos ut quas ut id eaque et est. perferendis et consectetur expedita aperiam et ut maxime est. dolorum vitae sunt dignissimos cupiditate in dolore consectetur sit magni enim. qui quis eos suscipit velit consectetur hic illum error qui rerum nemo qui. vel quod iste enim odit sunt vero ut sed dolores quas consequatur</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -1641,8 +1677,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Anahi Powers</a> <small>3 minutes ago</small></h5>
-			    <p>Qui ullam eveniet similique quis ab aut omnis dolores quos iure magnam</p>
+				<h5><a href="">Lorie McNeill</a> <small>3 minutes ago</small></h5>
+			    <p>Ut in quia consequatur quia aut enim dignissimos quia dicta consequatur excepturi</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -1650,8 +1686,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Elias Moore</a> <small>3 minutes ago</small></h5>
-			    <p>Neque voluptatem magnam quia dolore cumque voluptates aut deleniti et</p>
+				<h5><a href="">Daryl Hobbs</a> <small>3 minutes ago</small></h5>
+			    <p>Non libero ea mollitia illum</p>
 			  </div>
 			</div>
 			<form>
@@ -1676,14 +1712,14 @@
 			<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><a href="">Staci Adkins</a></h4>
+		    <h4 class="media-heading"><a href="">Dalton Lane</a></h4>
 		    <small>3 minutes ago</small>
 		  </div>
 		</div>
 		<a data-toggle="tooltip" data-placement="left" title="Hide post" href="" class="btn btn-default"><i class="fa fa-trash"></i></a>
 	</div>
 	<div class="body">
-		<p>Fugiat repellendus tempore et ex beatae quo earum et illo laudantium laudantium velit. nam architecto est similique omnis distinctio odit nesciunt ipsam magni. sint veritatis optio excepturi ex ab voluptas nisi nemo doloremque. libero consequatur aut nam. officia sequi vel facere cupiditate quo iusto praesentium nihil laudantium omnis qui hic. aliquam ex facilis velit laboriosam similique occaecati sit ut natus et provident. nulla sequi facilis error occaecati quia et harum veritatis veniam sed aliquid corporis</p>
+		<p>Dolorem hic enim ut quaerat nihil est aut voluptas. laudantium et ut quam delectus quam veritatis minus impedit expedita et eos aut. veniam sit et nesciunt dignissimos deleniti ut repellat voluptas</p>
 		<div class="attachments">
 			<a href="#" class="photoset-grid-basic" data-layout="13" data-toggle="modal" data-target=".post-modal">
   			  <img data-highres="images/demo/withhearts1-highres.jpg" src="images/demo/withhearts1-500px.jpg" />
@@ -1717,8 +1753,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Nia Puckett</a> <small>3 minutes ago</small></h5>
-			    <p>Repellat non iste et modi vero qui atque consequuntur aperiam sunt temporibus qui reprehenderit rerum</p>
+				<h5><a href="">Orlaith Shaffer</a> <small>3 minutes ago</small></h5>
+			    <p>Esse velit totam aut temporibus est eligendi quis sit sit at ex voluptate</p>
 			  </div>
 			</div>
 			<div class="media">
@@ -1726,8 +1762,8 @@
 				<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 			  </a>
 			  <div class="media-body">
-				<h5><a href="">Dirk Matthews</a> <small>3 minutes ago</small></h5>
-			    <p>Placeat consequatur vel rerum dolore sint perferendis eaque illo</p>
+				<h5><a href="">Ana Adkins</a> <small>3 minutes ago</small></h5>
+			    <p>Repudiandae quis itaque libero commodi nobis voluptas</p>
 			  </div>
 			</div>
 			<form>
@@ -1756,8 +1792,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Laila May</h4>
-			<p>Iste cupiditate perspiciatis libero similique f...</p>
+			<h4>Madeline Underwood</h4>
+			<p>At eligendi et et doloremque voluptatem eligend...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1771,8 +1807,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Rogelio Woods</h4>
-			<p>Ullam sit iure aut est. enim sint placeat et ne...</p>
+			<h4>Dulce Harvey</h4>
+			<p>Error voluptatem beatae nihil sequi corporis qu...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1786,8 +1822,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Alondra May</h4>
-			<p>Est exercitationem repudiandae eius aut atque u...</p>
+			<h4>Orlaith Walton</h4>
+			<p>Quis alias animi est similique nulla repellendu...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1801,8 +1837,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Tomas Love</h4>
-			<p>Et rem vel natus similique eum mollitia atque n...</p>
+			<h4>Eric Perkins</h4>
+			<p>Et amet omnis culpa occaecati doloremque sed ha...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1816,8 +1852,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Antonio Barr</h4>
-			<p>Ipsa qui repellat quidem et sint consequuntur q...</p>
+			<h4>Niall Whitaker</h4>
+			<p>Ut maiores velit amet totam. autem aperiam et c...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1831,8 +1867,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Brenden Monroe</h4>
-			<p>Cumque aut ad deleniti cumque quas nostrum assu...</p>
+			<h4>Tonia Watts</h4>
+			<p>Assumenda sit dolores ea dignissimos placeat ea...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1846,8 +1882,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Elias Terrell</h4>
-			<p>Cumque exercitationem neque eveniet aspernatur ...</p>
+			<h4>Dulce Ross</h4>
+			<p>Ut sint tempore expedita veritatis qui consequa...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1861,8 +1897,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>inley Chappell</h4>
-			<p>Et est fuga et porro quod. modi impedit repelle...</p>
+			<h4>Kyra Heath</h4>
+			<p>Nihil reiciendis sit ad accusamus est a magnam ...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1876,8 +1912,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Abel Abrams</h4>
-			<p>Error sint facilis in quaerat laboriosam nemo h...</p>
+			<h4>Alondra Dunn</h4>
+			<p>Odit id sit voluptate nihil labore tempore dolo...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1891,8 +1927,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Kyleigh Dougherty</h4>
-			<p>Quo et perspiciatis consequatur quasi nihil qua...</p>
+			<h4>Angelina Moore</h4>
+			<p>Sint molestiae molestias asperiores asperiores ...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1906,8 +1942,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Harrison Beasley</h4>
-			<p>Eos tempore alias quod. ipsum rem ut sequi sapi...</p>
+			<h4>Leslie Davidson</h4>
+			<p>Vel et doloribus officiis expedita aspernatur. ...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1926,8 +1962,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Tonia Schroeder</h4>
-			<p>Et magni sint eum non perferendis et est nisi a...</p>
+			<h4>Sadie Zhang</h4>
+			<p>Sint omnis eum omnis dolorum tempora blanditiis...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1941,8 +1977,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Neil Olsen</h4>
-			<p>Debitis id maiores rem blanditiis reiciendis. r...</p>
+			<h4>Alma Dunn</h4>
+			<p>Eligendi eligendi cumque et delectus quis optio...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1956,8 +1992,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Clyde Carver</h4>
-			<p>Dicta aliquid provident rerum soluta. magnam do...</p>
+			<h4>Ruben Stout</h4>
+			<p>Officia qui iusto incidunt quos et veritatis se...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1971,8 +2007,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Staci Sykes</h4>
-			<p>Vel ut aut rerum quis rerum atque magnam enim n...</p>
+			<h4>Abel Waters</h4>
+			<p>Et at odio voluptas maiores ut error voluptatem...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -1986,8 +2022,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>inley Scarborough</h4>
-			<p>Tenetur aut doloremque aspernatur vero eum cupi...</p>
+			<h4>Tammie Dunn</h4>
+			<p>Ipsa quo pariatur sint quo iure explicabo elige...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -2001,8 +2037,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Manuel Hamilton</h4>
-			<p>Fugit dolores perspiciatis sed quidem modi. ani...</p>
+			<h4>Deana Schultz</h4>
+			<p>Maiores quae quam est. iusto praesentium harum ...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -2016,8 +2052,8 @@
 	<a href=""><img class="img-responsive" src="images/sample-thumbs/1.jpg" /></a>
 	<div class="caption">
 		<a href="">
-			<h4>Virgil Coleman</h4>
-			<p>Consequatur enim in rem quis adipisci earum ips...</p>
+			<h4>Katie Chung</h4>
+			<p>Omnis rem est sapiente. est in et dolor dolorib...</p>
 			<ul class="nav nav-justified">
 				<li><span class="badge"><i class="fa fa-users"></i> 135</span> Followers</li>
 			</ul>
@@ -2132,13 +2168,13 @@
 									<img class="img-rounded" width="50" src="images/sample-thumbs/2.jpg" />
 								  </a>
 								  <div class="media-body">
-								    <h4 class="media-heading"><a href="">Constance Desai</a></h4>
+								    <h4 class="media-heading"><a href="">Skyler O'Donnell</a></h4>
 								    <small>3 minutes ago</small>
 								  </div>
 								</div>
 							</div>
 							<div class="body">
-								<p>Cumque quis minus tenetur voluptatum rerum enim magni ex nulla doloremque iste voluptas amet. quidem officiis ducimus in id voluptas voluptas. odio expedita a provident corrupti laboriosam et voluptas qui aut est mollitia. enim expedita ut quisquam a exercitationem. est quae ipsa eaque qui eum architecto beatae consequatur recusandae minima. consequatur eos dignissimos ea voluptatem et quidem et</p>
+								<p>Magni libero in dolorem tempore sed. ut vel laboriosam enim architecto omnis est quisquam voluptatem commodi officia at. saepe quod autem est maxime ipsam quae aut et. distinctio quisquam ad id dolorem suscipit. ea alias quisquam modi. sint qui et fugiat enim id. ipsam laborum laudantium fugit est a doloribus</p>
 							</div>
 							<div class="foot">
 								<div class="actions clearfix">
@@ -2163,8 +2199,8 @@
 										<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 									  </a>
 									  <div class="media-body">
-										<h5><a href="">Trisha Hewitt</a> <small>3 minutes ago</small></h5>
-									    <p>Corrupti quis rerum officia officiis sapiente fuga autem delectus qui vel dolorum et quibusdam dolore</p>
+										<h5><a href="">Angelo Hatcher</a> <small>3 minutes ago</small></h5>
+									    <p>Vel adipisci dolorem dolorem est pariatur provident possimus iusto non numquam rerum exercitationem cumque cumque</p>
 									  </div>
 									</div>
 									<div class="media">
@@ -2172,8 +2208,8 @@
 										<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 									  </a>
 									  <div class="media-body">
-										<h5><a href="">Samuel Justice</a> <small>3 minutes ago</small></h5>
-									    <p>Consectetur dolorem sequi eum ipsum ea omnis eligendi quis</p>
+										<h5><a href="">Toby Song</a> <small>3 minutes ago</small></h5>
+									    <p>Harum mollitia qui impedit excepturi rem quidem et tempore quasi excepturi aut repellendus</p>
 									  </div>
 									</div>
 									<div class="media">
@@ -2181,8 +2217,8 @@
 										<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 									  </a>
 									  <div class="media-body">
-										<h5><a href="">Michelle Christensen</a> <small>3 minutes ago</small></h5>
-									    <p>Qui occaecati nihil iste numquam ut sed sit aut quis quibusdam</p>
+										<h5><a href="">Noelle Marsh</a> <small>3 minutes ago</small></h5>
+									    <p>Nesciunt aliquam qui rerum impedit numquam voluptas vero ut quia</p>
 									  </div>
 									</div>
 									<div class="media">
@@ -2190,8 +2226,8 @@
 										<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 									  </a>
 									  <div class="media-body">
-										<h5><a href="">Moses Abrams</a> <small>3 minutes ago</small></h5>
-									    <p>Et adipisci enim hic atque et fuga quis non a consequuntur</p>
+										<h5><a href="">Piper Graham</a> <small>3 minutes ago</small></h5>
+									    <p>Nihil voluptas eveniet iusto repellat autem optio at ad possimus voluptates</p>
 									  </div>
 									</div>
 									<div class="media">
@@ -2199,8 +2235,8 @@
 										<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 									  </a>
 									  <div class="media-body">
-										<h5><a href="">Isabelle Monroe</a> <small>3 minutes ago</small></h5>
-									    <p>Esse cupiditate tempore eveniet sint consequatur aut consequatur harum velit reiciendis omnis</p>
+										<h5><a href="">Hamish Parrott</a> <small>3 minutes ago</small></h5>
+									    <p>Magnam exercitationem quod deserunt natus earum soluta magni aliquam aspernatur incidunt facilis et commodi consequatur</p>
 									  </div>
 									</div>
 									<div class="media">
@@ -2208,8 +2244,8 @@
 										<img class="img-circle" width="30" src="images/sample-thumbs/4.jpg" />
 									  </a>
 									  <div class="media-body">
-										<h5><a href="">Nia Branch</a> <small>3 minutes ago</small></h5>
-									    <p>Velit et et nulla sint reprehenderit nihil molestiae possimus non vel</p>
+										<h5><a href="">Freya Kane</a> <small>3 minutes ago</small></h5>
+									    <p>Sit deleniti sequi aperiam tempore rerum magni aspernatur tenetur aliquid placeat occaecati</p>
 									  </div>
 									</div>
 									<form>
