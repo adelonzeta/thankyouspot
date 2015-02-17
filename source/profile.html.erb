@@ -3,16 +3,47 @@ title: Ian Delgado
 layout: user
 ---
 
+<div class="profile-editing-overlay"></div>
 <header class="has-cover"> <!-- remove class if no cover photo -->
-	<div class="header-photo" style="background: url(images/sample-thumbs/profile-header3.jpg) no-repeat center / cover #fff;"></div> <!-- Remove this if no cover photo -->
+	<div class="editing-cover-overlay"></div>
+	<div class="header-photo" style="background: url(images/sample-thumbs/profile-header3.jpg) no-repeat center / cover #fff;"></div> <!-- Remove this if no cover photo -->	
+	<div class="dropdown editing-cover-button">
+		<a href="" data-toggle="dropdown" class="button"><i class="fa fa-photo"></i> Change Cover</a>
+		<ul class="dropdown-menu">
+			<li><a href="">Upload photo</a></li>
+			<li><a href="">Remove</a></li>
+		</ul>
+		<input type="file" class="hidden"><!-- Call this when uploading photo -->
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<%= image_tag 'sample-thumbs/2.jpg', :class => 'img-circle', :width => '180' %>
-				<h1>Ian Delgado</h1>
-				<p class="lead"> I love nature. I love cats and dogs. I love photography. I love music. I respect life and other person's point of view. I don't judge anyone.</p>
-				<a href="" class="btn btn-success btn-lg" data-toggle="modal" data-target="#sayThanksForm"><i class="fa fa-pencil"></i> Say Thanks</a>
-				<a href="" class="btn btn-default btn-lg"><i class="fa fa-plus-circle"></i> Follow</a>
+				<div class="profile-photo-container">
+					<div class="dropdown editing-photo">
+						<a href="" data-toggle="dropdown" class="button"><i class="fa fa-camera"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href="">Upload photo</a></li>
+							<li><a href="">Remove</a></li>
+						</ul>
+						<input type="file" class="hidden"><!-- Call this when uploading photo -->
+					</div>
+					<%= image_tag 'sample-thumbs/4.jpg', :class => 'img-circle profile-photo', :width => '180' %>
+				</div>
+				<div class="saved-view">
+					<h1>Ian Delgado</h1>
+					<p class="lead"> I love nature. I love cats and dogs. I love photography. I love music. I respect life and other person's point of view. I don't judge anyone.</p>
+					<!--
+					<a href="" class="btn btn-success btn-lg" data-toggle="modal" data-target="#sayThanksForm"><i class="fa fa-pencil"></i> Say Thanks</a>
+					<a href="" class="btn btn-default btn-lg"><i class="fa fa-plus-circle"></i> Follow</a>
+					-->
+					<a href="javascript:void(0)" class="btn btn-default btn-lg edit-profile"><i class="fa fa-pencil"></i> Edit Profile</a>
+				</div>
+				<div class="editing-view">
+					<input type="text" value="Ian Delgado" class="form-control editing-name" placeholder="Your Name">
+					<textarea class="form-control editing-bio" rows="3" cols="40" placeholder="Your Bio">I love nature. I love cats and dogs. I love photography. I love music. I respect life and other person's point of view. I don't judge anyone.</textarea>
+					<a href="javascript:void(0)" class="btn btn-primary btn-lg">Save Changes</a>
+					<a href="javascript:void(0)" class="btn btn-default btn-lg cancel-editing">Cancel</a>
+				</div>
 				<ul class="nav nav-pills nav-justified">
 					<li class="active">
 						<a role="tab" data-toggle="tab" href="#user-recognitions">
@@ -47,6 +78,9 @@ layout: user
 	<div class="container">
 		<div class="tab-content">
 			<div role="tabpanel" class="tab-pane active" id="user-recognitions">
+				<!-- Feel free to change the text.
+				<p class="empty-feed">Nothing to display here. <a href="">Share something?</a></p>
+				-->
 				<div class="row post-feed">
 					<% for i in 1..2 %>
 					<div class="col-md-6">

@@ -55,6 +55,89 @@
 		    position: absolute;
 		    top: 50px;
 		    width: 100%;
+			&.editing {
+				z-index: 99999;
+			}
+		}
+		.editing-view {
+			display: none;
+			position: relative;
+			z-index: 99999;
+		}
+		.editing-name {
+			font-size: 36px;
+			font-family: @font-family-serif;
+			font-weight: 300;
+			text-align: center;
+			margin: 30px 0 20px;
+			height: auto;
+			border: none;
+			box-shadow: none;
+			&:focus {
+				background: #efefef;
+			}
+		}
+		.editing-bio {
+			margin-bottom: 40px;
+			font-size: 21px;
+			font-weight: 300;
+			line-height: 1.4;
+			text-align: center;
+			resize: none;
+			border: none;
+			box-shadow: none;
+			&:focus {
+				background: #efefef;
+			}
+		}
+		.editing-photo {
+		    position: absolute;
+			display: none;
+			z-index: 9999999;
+			left: 41%;
+			.button {
+				background: #fff;
+			    border-radius: 100px;
+			    color: #525964;
+			    display: block;
+			    font-size: 1.2em;
+			    padding: 8px;
+				i {
+					display: block;
+				}
+			}
+		}
+		.editing-cover-overlay {
+			background: rgba(0,0,0,0.3);
+		    height: 310px;
+		    left: 0;
+		    pointer-events: none;
+		    position: absolute;
+		    top: 50px;
+		    width: 100%;
+			z-index: 999999;
+			display: none;
+		}
+		.editing-cover-button {
+		    position: absolute;
+		    right: 10px;
+		    top: 310px;
+			display: none;
+			z-index: 999999;
+			.button {
+			    background: #fff;
+			    border-radius: 5px;
+			    color: lighten(@gray-base, 20%);
+			    font-weight: 700;
+			    padding: 10px 20px;
+				text-transform: uppercase;
+			}
+			.dropdown-menu {
+				margin-top: 10px;
+			}
+		}
+		.profile-photo-container {
+			position: relative;
 		}
 	}
 	section {
@@ -121,5 +204,16 @@
 		.show-more {
 			margin-top: -15px;
 		}
+	}
+	.profile-editing-overlay {
+		background-color: #fff;
+		bottom: 0;
+		display: none;
+		left: 0;
+		opacity: 0.8;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 9999;
 	}
 }
