@@ -47,7 +47,7 @@ $(document).ready(function () {
 		$(".editing-cover-button").show();
 		$(".profile header").css("padding", "180px 0 0");
 		$(".editing-photo").show();
-		$(".navbar").css("z-index","9999999");
+		$(".navbar").css("z-index","99999999");
 		$(".nav-overlay").show();
 	});
 	
