@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.1",
-    "font-awesome": "~4.2.0",
+    "font-awesome": "~4.3.0",
     "photoset-grid": "~1.0.1"
   }
 }
