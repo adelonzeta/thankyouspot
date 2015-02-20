@@ -3,8 +3,13 @@ title: Ian Delgado
 layout: user
 ---
 
+<div class="alert alert-warning alert-dismissible alert-drawer" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Warning!</strong> Better check yourself, you're not looking too good.
+</div>
 <div class="profile-editing-overlay"></div>
 <header class="has-cover"> <!-- remove class if no cover photo -->
+	
 	<div class="editing-cover-overlay"></div>
 	<div class="header-photo" style="background: url(images/sample-thumbs/profile-header3.jpg) no-repeat center / cover #fff;"></div> <!-- Remove this if no cover photo -->	
 	<div class="dropdown editing-cover-button">
@@ -32,10 +37,10 @@ layout: user
 				<div class="saved-view">
 					<h1>Ian Delgado</h1>
 					<p class="lead"> I love nature. I love cats and dogs. I love photography. I love music. I respect life and other person's point of view. I don't judge anyone.</p>
-					<!--
+					
 					<a href="" class="btn btn-success btn-lg" data-toggle="modal" data-target="#sayThanksForm"><i class="fa fa-pencil"></i> Say Thanks</a>
 					<a href="" class="btn btn-default btn-lg"><i class="fa fa-plus-circle"></i> Follow</a>
-					-->
+					
 					<a href="javascript:void(0)" class="btn btn-default btn-lg edit-profile"><i class="fa fa-pencil"></i> Edit Profile</a>
 				</div>
 				<div class="editing-view">
@@ -137,6 +142,9 @@ layout: user
       </div>
       <div class="modal-body">
 		  <form>
+			  <div role="alert" class="alert alert-danger">
+			    <strong>Oh snap!</strong> Change a few things up and try submitting again.
+			  </div>
 		  	  <div class="form-group">
 		  	      <textarea class="form-control" rows="3" placeholder="What are you thankful for?"></textarea>
 				  <div class="attached-photos" style="display:none;">

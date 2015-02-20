@@ -49,6 +49,7 @@ $(document).ready(function () {
 		$(".editing-photo").show();
 		$(".navbar").css("z-index","99999999");
 		$(".nav-overlay").show();
+		$(".alert-drawer").css("z-index","9999999");
 	});
 	
 	$(".cancel-editing").click(function () {
@@ -63,5 +64,6 @@ $(document).ready(function () {
 		$(".editing-photo").hide();
 		$(".navbar").removeAttr("style");
 		$(".nav-overlay").hide();
+		$(".alert-drawer").removeAttr("style");
 	});
 });
