@@ -144,16 +144,6 @@
 		padding: 15px 0;
 	}
 	#sayThanksForm {
-		.modal-header {
-			border-bottom: 0;
-			padding: 60px 60px 0;
-			h4 {
-				
-			}
-			.close {
-				font-size: 1em;
-			}
-		}
 		.modal-body {
 			padding: 20px 60px 60px;
 			textarea {
@@ -161,12 +151,12 @@
 				resize: none;
 			}
 			.attachments {
-				margin-top: 20px;
 				li {
 					a {
-						border: solid 2px #fff;
+						border: solid 2px #F9F7F6;
 						background: #efefef;
 						color: lighten(@gray-base, 25%);
+						padding: 15px;
 					}
 				}
 			}
@@ -175,7 +165,8 @@
 				font-weight: 700;
 			}
 			.attached-photos {
-				padding: 20px 20px 0;
+				padding: 0 20px 0;
+				margin-bottom: 20px;
 				.photo {
 					display: inline-block;
 					padding: 10px;
@@ -191,6 +182,7 @@
 			}
 			.attached-video {
 				margin-top: 20px;
+				margin-bottom: 20px;
 			}
 		}
 	}
@@ -201,8 +193,8 @@
 		padding-top: 15px;
 	}
 	#user-recognitions, #user-posts {
-		.show-more {
-			margin-top: -15px;
+		.post-feed {
+			margin-top: 15px;
 		}
 	}
 	.profile-editing-overlay {

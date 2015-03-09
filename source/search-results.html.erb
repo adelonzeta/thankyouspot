@@ -25,38 +25,26 @@ layout: user
 	</div>
 </section>
 
-<div class="modal fade" id="add-person" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade kaede-modal" id="add-person" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Add Person</h4>
+        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-plus-circle"></i> Add Person</h4>
       </div>
       <div class="modal-body">
-		<form class="form-horizontal" role="form">
+		<form class="form-horizontal narrow-form" role="form">
+			<!--
 			<div role="alert" class="alert alert-danger alert-dismissible">
 			  <button aria-label="Close" data-dismiss="alert" class="close" type="button"><span aria-hidden="true">×</span></button>
 			  Everything is <strong>wrong test!</strong>
 			</div>
-			<div>
-				<label>Name</label>
-				<input type="text" class="form-control" value="Oprah Winfrey">
-				<span class="help-block">We're big on real names around here, so people know who's who</span>
-			</div>
-			<div class="has-error">
-				<label>Email</label>
-				<input type="email" class="form-control" value="oprahwinfrey@gmail.com">
-				<span class="help-block">Error message goes here!</span>
-			</div>
-			<div>
-				<label>Bio</label>
-				<textarea class="form-control" rows="4" cols="40">YouTuber, graphic designer, Tumblrererer, ampersand lover, and venn-diagramatically brilliant.</textarea>
-			</div>
+				-->
+			<input type="text" class="form-control" placeholder="First Name">
+			<input type="text" class="form-control" placeholder="Last Name">
+			<input type="email" class="form-control" placeholder="Email">
+			<button type="button" class="btn btn-success btn-lg btn-block">Save & View Profile</button>
 		</form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save & View Profile</button>
       </div>
     </div>
   </div>

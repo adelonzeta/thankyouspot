@@ -1,6 +1,31 @@
 $(document).ready(function () {
+	
+	function arrange_post_grid() {
+		var wookmark = new Wookmark('.post-feed',{
+			autoResize: true,
+			container: $('.post-feed'),
+			itemWidth: '48%',
+			fillEmptySpace: false,
+			flexibleWidth: '100%',
+			offset: 30
+		});
+	}
+	function arrange_grids() {
+		$('.photoset-grid-basic').each(function () {
+			$(this).photosetGrid({
+				onInit: function(){
+					arrange_post_grid();
+				},
+				onComplete: function(){
+					arrange_post_grid();
+				}
+			});
+		});
+	}
+	
 	// Post Photo-Grid
-	$('.photoset-grid-basic').photosetGrid();
+	arrange_grids();
+	
 	
 	// Activate Bootstrap Tooltip
 	$('[data-toggle="tooltip"]').tooltip();
@@ -28,8 +53,8 @@ $(document).ready(function () {
 	    $(".navbar input").focus();
 	});
 	
-	$(window).resize(function(){
-	    $('.photoset-grid-basic').photosetGrid();
+	$(window).resize(function () {
+		$('.photoset-grid-basic').photosetGrid();
 	});
 	
 	$(".edit-profile").click(function () {
@@ -65,5 +90,9 @@ $(document).ready(function () {
 		$(".navbar").removeAttr("style");
 		$(".nav-overlay").hide();
 		$(".alert-drawer").removeAttr("style");
+	});
+	
+	$(".profile header .nav li a").click(function () {
+		arrange_grids();
 	});
 });

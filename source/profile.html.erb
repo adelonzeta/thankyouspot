@@ -2,11 +2,12 @@
 title: Ian Delgado
 layout: user
 ---
-
+<!--
 <div class="alert alert-warning alert-dismissible alert-drawer" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <strong>Warning!</strong> Better check yourself, you're not looking too good.
 </div>
+-->
 <div class="profile-editing-overlay"></div>
 <header class="has-cover"> <!-- remove class if no cover photo -->
 	
@@ -18,7 +19,7 @@ layout: user
 			<li><a href="">Upload photo</a></li>
 			<li><a href="">Remove</a></li>
 		</ul>
-		<input type="file" class="hidden"><!-- Call this when uploading photo -->
+		<input type="file" class="hidden" /><!-- Call this when uploading photo -->
 	</div>
 	<div class="container">
 		<div class="row">
@@ -30,7 +31,7 @@ layout: user
 							<li><a href="">Upload photo</a></li>
 							<li><a href="">Remove</a></li>
 						</ul>
-						<input type="file" class="hidden"><!-- Call this when uploading photo -->
+						<input type="file" class="hidden" /><!-- Call this when uploading photo -->
 					</div>
 					<%= image_tag 'sample-thumbs/4.jpg', :class => 'img-circle profile-photo', :width => '180' %>
 				</div>
@@ -40,8 +41,9 @@ layout: user
 					
 					<a href="" class="btn btn-success btn-lg" data-toggle="modal" data-target="#sayThanksForm"><i class="fa fa-pencil"></i> Say Thanks</a>
 					<a href="" class="btn btn-default btn-lg"><i class="fa fa-plus-circle"></i> Follow</a>
-					
+					<!--
 					<a href="javascript:void(0)" class="btn btn-default btn-lg edit-profile"><i class="fa fa-pencil"></i> Edit Profile</a>
+						-->
 				</div>
 				<div class="editing-view">
 					<input type="text" value="Ian Delgado" class="form-control editing-name" placeholder="Your Name">
@@ -86,25 +88,17 @@ layout: user
 				<!-- Feel free to change the text.
 				<p class="empty-feed">Nothing to display here. <a href="">Share something?</a></p>
 				-->
-				<div class="row post-feed">
-					<% for i in 1..2 %>
-					<div class="col-md-6">
-						<% for i in 1..5 %>
+				<div class="post-feed">
+					<% for i in 1..6 %>
 						<%= partial "partials/recognition" %>
-						<% end %>
-					</div>
 					<% end %>
 				</div>
 				<a href="" class="show-more btn btn-default btn-block">Show more</a>
 			</div>
 			<div role="tabpanel" class="tab-pane" id="user-posts">
-				<div class="row post-feed">
-					<% for i in 1..2 %>
-					<div class="col-md-6">
-						<% for i in 1..5 %>
+				<div class="post-feed">
+					<% for i in 1..6 %>
 						<%= partial "partials/post" %>
-						<% end %>
-					</div>
 					<% end %>
 				</div>
 				<a href="" class="show-more btn btn-default btn-block">Show more</a>
@@ -133,18 +127,20 @@ layout: user
 	</div>
 </section>
 <!-- Modal -->
-<div class="modal fade" id="sayThanksForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade kaede-modal" id="sayThanksForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">Skip - View Ian's Profile</button>
         <h4 class="modal-title" id="myModalLabel"><i class="fa fa-pencil"></i> Say thanks to Ian!</h4>
       </div>
       <div class="modal-body">
 		  <form>
+			  <!--
 			  <div role="alert" class="alert alert-danger">
 			    <strong>Oh snap!</strong> Change a few things up and try submitting again.
 			  </div>
+				  -->
 		  	  <div class="form-group">
 		  	      <textarea class="form-control" rows="3" placeholder="What are you thankful for?"></textarea>
 				  <div class="attached-photos" style="display:none;">
@@ -168,7 +164,7 @@ layout: user
 					<li><a href=""><i class="fa fa-youtube"></i> Add a Video</a></li>
 				  </ul>
 		  	  </div>
-			  <button type="submit" class="btn btn-success btn-block">Post</button>
+			  <button type="submit" class="btn btn-success btn-lg btn-block">Post</button>
 		  </form>
       </div>
     </div>
